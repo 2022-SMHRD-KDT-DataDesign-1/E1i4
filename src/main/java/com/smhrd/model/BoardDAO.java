@@ -1,16 +1,11 @@
 package com.smhrd.model;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.apache.ibatis.session.SqlSessionFactory;
 
-public class BoardDAO extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+import com.smhrd.db.SqlSessionManager;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+public class BoardDAO {
 
-	}
-
+	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
+	
 }
