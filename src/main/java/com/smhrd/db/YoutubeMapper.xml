@@ -5,12 +5,17 @@
 
 <mapper namespace="com.smhrd.db.YoutubeMapper">
 	<select id="showYoutube" resultType="YoutubeVO">
-		select * from youtubes
+		<!-- select A.*,(select MOVIE_ID from movies where movie_id = A.movie_id)
+		from youtubes A
+		where A.youtube_type = '결말포함' -->
+		<!-- 영화ID를 기준으로 조회를 하고 
+		그 리뷰영상이 결말, 리뷰, 해석 -->
+		select * from youtubes order by youtube_id desc
 	</select>
-	
-	<insert id="insertYoutube" parameterType="YoutubeVO">
+	 <!-- youtube_id=#{youtube_id} -->
+	<!-- <insert id="insertYoutube" parameterType="YoutubeVO">
 		insert into youtubes values(youtube_num.nextval, #{movie_id}, #{youtube_type},
 									#{youtuber}, #{youtube_title}, #{youtube_link})
-	</insert>
+	</insert> -->
 
 </mapper>

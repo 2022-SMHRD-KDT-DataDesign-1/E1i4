@@ -1,5 +1,6 @@
 package com.smhrd.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -19,12 +20,11 @@ public class YoutubeDAO {
 		return cnt;
 	}
 	
-	public List<YoutubeVO> showMovie(YoutubeVO vo) {
-		List<YoutubeVO> list = null;
+	public ArrayList<YoutubeVO> showYoutube() {
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		list = sqlSession.selectList("showMovie", vo);
+		List<YoutubeVO> list = sqlSession.selectList("showYoutube");
 		sqlSession.close();
 		
-		return list;
+		return (ArrayList<YoutubeVO>)list;
 	}
 }
