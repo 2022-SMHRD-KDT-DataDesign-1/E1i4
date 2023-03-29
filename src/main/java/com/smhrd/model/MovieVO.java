@@ -16,7 +16,6 @@ public class MovieVO {
 	
 	public MovieVO(String movie_id, String movie_title, String genre, String movie_date, String director, String actors,
 			String poster_link, String movie_rate, String synopsis, String trailer, String movie_age) {
-		super();
 		this.movie_id = movie_id;
 		this.movie_title = movie_title;
 		this.genre = genre;
