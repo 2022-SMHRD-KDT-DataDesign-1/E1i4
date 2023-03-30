@@ -29,7 +29,7 @@
  <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-black navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+            <h2 class="m-0 text-primary"><!-- <i class="fa fa-book me-3"> --></i>REVVIA</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -192,7 +192,8 @@
         <!-- 리뷰영상 -->
         <div class="container1">
             <div class="text-center"> 
-                <h6 class="section-title bg-white text-center text-primary px-3">Review</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+                <h1 class="mb-5">Review</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
@@ -235,7 +236,8 @@
         <!-- 결말포함영상 -->
         <div class="container2">
             <div class="text-center"> 
-                <h6 class="section-title bg-white text-center text-primary px-3">Include_End</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+                <h1 class="mb-5">Include_End</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
@@ -278,7 +280,8 @@
         <!-- 해석영상 -->
         <div class="container3">
             <div class="text-center"> 
-                <h6 class="section-title bg-white text-center text-primary px-3">interpretation</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+                <h1 class="mb-5">Interpretation</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
@@ -317,6 +320,7 @@
                 </div>
             </div>
         </div>
+        
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
