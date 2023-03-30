@@ -9,11 +9,15 @@
 		select * from members
 	</select>
 
-	<insert id="insertMember" parameterType="MemberVO">
-		insert into members
-		values(#{member_id}, #{member_pw}, #{nickname}, #{gender})
-	</insert>
-
+	<insert id ="insertMember" parameterType="MemberVO" >
+		 insert into members values(#{member_id},#{member_pw},#{nickname},#{gender},#{member_pwck}) 
+	</insert> 
+	
+	<select id="selectOne" resultType="MemberVO" parameterType="MemberVO">
+ 		select * from members where member_id=#{member_id} and member_pw=#{member_pw}
+ 	</select>
+ 	
+ 	
 	<update id="updateMember" parameterType="MemberVO">
 		update members set
 		member_pw=#{member_pw}, nickname=#{nickname}, gender=#{gender}

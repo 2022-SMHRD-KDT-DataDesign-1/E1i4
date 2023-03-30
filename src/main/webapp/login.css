@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@import
+	url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap")
+	;
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+	background-color: #1e1e1e;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+}
+
+input {
+	display: block;
+}
+/* 이메일 패스워드 */
+form input[type="text"], input[type="password"] {
+	padding: 10px;
+	font-family: "Montserrat", sans-serif;
+	width: 319px;
+	
+	text-align: center;
+	margin: 20px auto;
+	background: #efefef;
+	border: 0;
+	border-radius: 11px;
+	outline: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+	border-color: black;
+	box-shadow: 0 0 0 1.2px black;
+}
+/* 이메일 입력 */
+#username {
+	background-image: url("/img/user.png");
+	background-repeat: no-repeat;
+	background-position: 13px;
+	text-indent: 17px;
+}
+
+/*패스워드 입력부분  */
+#password {
+	background-image: url("/img/password.png");
+	background-repeat: no-repeat;
+	background-position: 13px;
+	text-indent: 17px;
+}
+/*회원 가입 부분  */
+#join {
+	display: inline;
+	font-size: 13px;
+	background-color: #1e1e1e;
+	border: #1e1e1e;
+	height: 50px;
+	margin: 0px 0px 0px 150px;
+	border-radius: 11px;
+	color: white;
+}
+
+.gender {
+	color: white;
+	display: inline-flex;
+	margin: 0px 0px 0px 115px;
+}
+/* 로그인 기억하기 버튼*/
+#remember-me {
+	display: inline;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+/* 로그인 기억하기 */
+#rememberme {
+	display: inline;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 13px;
+	vertical-align: middle;
+	color: white;
+}
+/* 로그인  */
+input[type="submit"] {
+	font-family: Montserrat;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 0px;
+	margin-left: 3px;
+	margin-top: 5px;
+	padding: 10px;
+	width: 338px;
+	height: 33px;
+	background-color: #c657e1;
+	border-radius: 11px;
+	border: 0;
+	color: white;
+}
+/*제목 RIVVIA  */
+.logo {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 0px;
+	text-align: center;
+	padding-bottom: 10px;
+	color: #c657e1;
+}

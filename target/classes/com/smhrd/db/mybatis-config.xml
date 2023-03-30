@@ -7,6 +7,7 @@
 	<properties resource = "com/smhrd/db/db.properties"/>
 	
 	<typeAliases>
+		<typeAlias type="com.smhrd.model.MemberVO" alias="MemberVO"/>
 		<typeAlias type="com.smhrd.model.BoardVO" alias="BoardVO"/>
 		<typeAlias type="com.smhrd.model.YoutubeVO" alias="YoutubeVO"/>
 	</typeAliases>
@@ -24,6 +25,7 @@
     </environment>
   </environments>
   <mappers>
+    <mapper resource="com/smhrd/db/MemberMapper.xml"/>
     <mapper resource="com/smhrd/db/BoardMapper.xml"/>
     <mapper resource="com/smhrd/db/YoutubeMapper.xml"/>
   </mappers>
