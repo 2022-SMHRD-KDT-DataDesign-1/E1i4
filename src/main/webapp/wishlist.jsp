@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicon -->
+   <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
@@ -27,10 +27,10 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrapYH.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="./css/style1.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
     <!-- css/style.css -->
 </head>
 
