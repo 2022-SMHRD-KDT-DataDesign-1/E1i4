@@ -20,10 +20,10 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrapyu.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleyu.css" rel="stylesheet">
     
 <body>
  <!-- Navbar Start -->
@@ -333,7 +333,7 @@
     
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/mainyu.js"></script>
     <!-- 예고편 -->
     <script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
 </body>
