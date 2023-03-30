@@ -543,12 +543,14 @@ input[name="star"]:checked + label {animation: scaleup 1s;}
 .comment{margin: -70px 0px 0px 0px;}
 #inputCom {margin: 25px 0px 10px -310px; width: 250px; height: 30px;}
 /* 댓글 게시판  */
-#board{display:block; overflow:auto;}
-#board th {position: sticky; top:0 ; background-color: gray;}
+#board{display:block; overflow:auto;position:absolute; border: 1px solid black;border-collapse:collapse; color: black; width:630px; height:220px; margin:0px 0px 0px 40px; background-color: whitesmoke; opacity: 0.8;}
+#board th {position: sticky; top:0 ; background-color: gray; text-align: center;}
 th:nth-of-type(4) {color:gray;}
-table{display:block; position:absolute; border: 1px solid black; text-align: center; color: black; width:630px; height:220px; margin:0px 0px 0px 40px; background-color: whitesmoke; opacity: 0.8;}
-.delete{font-size: 5px}
-.content{text-align: left;}
+#board td:nth-child(1) { text-align: center;}
+#board td:nth-child(2) { width: 400px; text-align: left;}
+#board td:nth-child(3) { text-align: center;}
+#board td:nth-child(4) { text-align: center; font-size: 5px}
+#board tr:nth-child(even) { background-color: #d8d8d8;}
 
   /* 리뷰영상 */
   .container1{margin: 400px 0px 0px 0px;}

@@ -59,7 +59,7 @@
     <div>
          
         <!-- 예고편 -->
-        <div class="trailer" mute="false" data-vbg-autoplay="true" data-vbg="https://youtu.be/jBdRhhSt3Bc"></div>
+        <div class="trailer" muted="false" data-vbg-autoplay="true" data-vbg="https://youtu.be/jBdRhhSt3Bc"></div>
         <!-- 영화정보  -->
         <div class="movie_import">
          <p id="movie_date">2019</p>
@@ -317,6 +317,9 @@
             </div>
         </div>
 
+
+     <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
        
     <!-- Testimonial End -->
  
