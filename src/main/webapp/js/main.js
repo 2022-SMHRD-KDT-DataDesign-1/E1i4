@@ -104,30 +104,28 @@
             }
         }
     });
-
-    $('.slick-service-item').slick({
-        slide: 'div',
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        nextArrow:$('.next'),
-        prevArrow:$('.prev'),
-
-        responsive: [ 
-            {  
-                breakpoint: 960,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                } 
-            },
-            { 
-                breakpoint: 768,
-                settings: {	
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                } 
-            }
-        ]
-    });
     
 })(jQuery);
+
+/* 예고편 */
+$(document).ready(function() {
+    $('[data-vbg]').youtube_background(); // 실행
+    });
+
+    /* 찜 */
+
+const like =() => {
+
+   let num = document.getElementsByClassName('tgNum')[0]
+   if(num.innerText == 0){
+      num.innerText = Number(num.innerText)+1 
+      console.log('찜 성공')
+   } else if (num.innerText == 1){
+      num.innerText = Number(num.innerText)-1 
+      console.log('찜 취소')
+   }
+   
+}
+
+document.getElementById('cb5').addEventListener('click',like)
+
