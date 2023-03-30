@@ -30,7 +30,7 @@
     <link href="css/bootstrapYH.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="./css/styleYH.css" rel="stylesheet">
+    <link href="./css/style1.css" rel="stylesheet">
     <!-- css/style.css -->
 </head>
 
