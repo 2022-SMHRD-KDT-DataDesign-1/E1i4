@@ -128,7 +128,7 @@
              </label>
            </div>
            <!-- 댓글 입력 -->
-           <form class="comment" action="MovieDetail.jsp" method="get">
+           <form class="comment" action="testimonial.jsp" method="get">
                <input id="inputCom" type="text" placeholder="댓글 입력...">
                <input type="submit" value="저장" id="submit"></input>
             </form>
