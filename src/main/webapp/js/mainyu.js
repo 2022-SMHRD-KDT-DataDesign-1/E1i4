@@ -144,19 +144,19 @@ document.getElementById('cb5').addEventListener('click',like)
 const score1 = () => {
 	
 	if(Number(scoreNum.innerText) == 0){		
-		scoreNum.innerText = Number(scoreNum.innerText)+20	
+		scoreNum.innerText = Number(scoreNum.innerText)+2	
 		console.log(scoreNum.innerText)		
-	} else if(Number(scoreNum.innerText) == 40){
-		scoreNum.innerText = Number(scoreNum.innerText)-20	
+	} else if(Number(scoreNum.innerText) == 4){
+		scoreNum.innerText = Number(scoreNum.innerText)-2
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 60){
-		scoreNum.innerText = Number(scoreNum.innerText)-40	
+	} else if(Number(scoreNum.innerText) == 6){
+		scoreNum.innerText = Number(scoreNum.innerText)-4
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 80){
-		scoreNum.innerText = Number(scoreNum.innerText)-60	
+	} else if(Number(scoreNum.innerText) == 8){
+		scoreNum.innerText = Number(scoreNum.innerText)-6	
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 100){
-		scoreNum.innerText = Number(scoreNum.innerText)-80	
+	} else if(Number(scoreNum.innerText) == 10){
+		scoreNum.innerText = Number(scoreNum.innerText)-8
 		console.log(scoreNum.innerText)
 	}
 	
@@ -165,19 +165,19 @@ const score1 = () => {
 const score2 = () => {
 	
 	if(Number(scoreNum.innerText) == 0){
-		scoreNum.innerText = Number(scoreNum.innerText)+40
+		scoreNum.innerText = Number(scoreNum.innerText)+4
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 20){
-		scoreNum.innerText = Number(scoreNum.innerText)+20
+	} else if(Number(scoreNum.innerText) == 2){
+		scoreNum.innerText = Number(scoreNum.innerText)+2
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 60){
-		scoreNum.innerText = Number(scoreNum.innerText)-20
+	} else if(Number(scoreNum.innerText) == 6){
+		scoreNum.innerText = Number(scoreNum.innerText)-2
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 80){
-		scoreNum.innerText = Number(scoreNum.innerText)-40
+	} else if(Number(scoreNum.innerText) == 8){
+		scoreNum.innerText = Number(scoreNum.innerText)-4
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 100){
-		scoreNum.innerText = Number(scoreNum.innerText)-60
+	} else if(Number(scoreNum.innerText) == 10){
+		scoreNum.innerText = Number(scoreNum.innerText)-6
 		console.log(scoreNum.innerText)
 	}
 	
@@ -186,19 +186,19 @@ const score2 = () => {
 const score3 = () => {
 	
 	if(Number(scoreNum.innerText) == 0){
-		scoreNum.innerText = Number(scoreNum.innerText)+60
+		scoreNum.innerText = Number(scoreNum.innerText)+6
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 20){
-		scoreNum.innerText = Number(scoreNum.innerText)+40
+	} else if(Number(scoreNum.innerText) == 2){
+		scoreNum.innerText = Number(scoreNum.innerText)+4
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 40){
-		scoreNum.innerText = Number(scoreNum.innerText)+20
+	} else if(Number(scoreNum.innerText) == 4){
+		scoreNum.innerText = Number(scoreNum.innerText)+2
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 80){
-		scoreNum.innerText = Number(scoreNum.innerText)-20
+	} else if(Number(scoreNum.innerText) == 8){
+		scoreNum.innerText = Number(scoreNum.innerText)-2
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 100){
-		scoreNum.innerText = Number(scoreNum.innerText)-40
+	} else if(Number(scoreNum.innerText) == 10){
+		scoreNum.innerText = Number(scoreNum.innerText)-4
 		console.log(scoreNum.innerText)
 	}
 	
@@ -207,19 +207,19 @@ const score3 = () => {
 const score4 = () => {
 	
 	if(Number(scoreNum.innerText) == 0){
-		scoreNum.innerText = Number(scoreNum.innerText)+80
+		scoreNum.innerText = Number(scoreNum.innerText)+8
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 20){
-		scoreNum.innerText = Number(scoreNum.innerText)+60
+	} else if(Number(scoreNum.innerText) == 2){
+		scoreNum.innerText = Number(scoreNum.innerText)+6
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 40){
-		scoreNum.innerText = Number(scoreNum.innerText)+40
+	} else if(Number(scoreNum.innerText) == 4){
+		scoreNum.innerText = Number(scoreNum.innerText)+4
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 60){
-		scoreNum.innerText = Number(scoreNum.innerText)+20
+	} else if(Number(scoreNum.innerText) == 6){
+		scoreNum.innerText = Number(scoreNum.innerText)+2
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 100){
-		scoreNum.innerText = Number(scoreNum.innerText)-20
+	} else if(Number(scoreNum.innerText) == 10){
+		scoreNum.innerText = Number(scoreNum.innerText)-2
 		console.log(scoreNum.innerText)
 	}
 	
@@ -228,19 +228,19 @@ const score4 = () => {
 const score5 = () => {
 	
 	if(Number(scoreNum.innerText) == 0){
-		scoreNum.innerText = Number(scoreNum.innerText)+100
+		scoreNum.innerText = Number(scoreNum.innerText)+10
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 20){
-		scoreNum.innerText = Number(scoreNum.innerText)+80
+	} else if(Number(scoreNum.innerText) == 2){
+		scoreNum.innerText = Number(scoreNum.innerText)+8
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 40){
-		scoreNum.innerText = Number(scoreNum.innerText)+60
+	} else if(Number(scoreNum.innerText) == 4){
+		scoreNum.innerText = Number(scoreNum.innerText)+6
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 60){
-		scoreNum.innerText = Number(scoreNum.innerText)+40
+	} else if(Number(scoreNum.innerText) == 6){
+		scoreNum.innerText = Number(scoreNum.innerText)+4
 		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 80){
-		scoreNum.innerText = Number(scoreNum.innerText)+20
+	} else if(Number(scoreNum.innerText) == 8){
+		scoreNum.innerText = Number(scoreNum.innerText)+2
 		console.log(scoreNum.innerText)
 	}
 	
