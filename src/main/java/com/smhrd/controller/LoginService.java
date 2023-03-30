@@ -27,7 +27,7 @@ public class LoginService implements Command{
 	    	  System.out.println("로그인 실패 ");
 	    	  
 	      }
-	      return "index.jsp";
+	      return "index-goun.html";
 	}
 	
 }
