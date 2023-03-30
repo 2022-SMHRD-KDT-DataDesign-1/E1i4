@@ -74,6 +74,7 @@
             </li>
             <li>
                 <span class="tgNum">0</span>
+                <span class="tgNum">0</span>
             </li>
         </ul>
         <P id="movie_actor">주연배우 : OOO</P>         

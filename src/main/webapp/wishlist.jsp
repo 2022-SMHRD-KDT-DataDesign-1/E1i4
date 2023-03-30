@@ -31,6 +31,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style1.css" rel="stylesheet">
+
 </head>
 
 <body>
