@@ -23,7 +23,7 @@
     <link href="css/bootstrapyu.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleyu.css" rel="stylesheet">
     
 <body>
  <!-- Navbar Start -->
@@ -128,7 +128,7 @@
              </label>
            </div>
            <!-- 댓글 입력 -->
-           <form class="comment" action="MovieDetail.jsp" method="get">
+           <form class="comment" action="testimonial.jsp" method="get">
                <input id="inputCom" type="text" placeholder="댓글 입력...">
                <input type="submit" value="저장" id="submit"></input>
             </form>
@@ -333,7 +333,7 @@
     
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/mainyu.js"></script>
     <!-- 예고편 -->
     <script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
 </body>

@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicon -->
+   <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
@@ -30,7 +30,11 @@
     <link href="css/bootstrapYH.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+<<<<<<< HEAD
     <link href="./css/style1.css" rel="stylesheet">
+=======
+    <link href="css/style1.css" rel="stylesheet">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4.git
     <!-- css/style.css -->
 </head>
 
