@@ -129,3 +129,125 @@ const like =() => {
 
 document.getElementById('cb5').addEventListener('click',like)
 
+/* 별점 */
+
+	let star1 = document.getElementById('one')
+	let star2 = document.getElementById('two')
+	let star3 = document.getElementById('three')
+	let star4 = document.getElementById('four')
+	let star5 = document.getElementById('five')
+		
+		
+	let scoreNum = document.getElementsByClassName('tgNum')[1]
+		
+
+const score1 = () => {
+	
+	if(Number(scoreNum.innerText) == 0){		
+		scoreNum.innerText = Number(scoreNum.innerText)+20	
+		console.log(scoreNum.innerText)		
+	} else if(Number(scoreNum.innerText) == 40){
+		scoreNum.innerText = Number(scoreNum.innerText)-20	
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 60){
+		scoreNum.innerText = Number(scoreNum.innerText)-40	
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 80){
+		scoreNum.innerText = Number(scoreNum.innerText)-60	
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 100){
+		scoreNum.innerText = Number(scoreNum.innerText)-80	
+		console.log(scoreNum.innerText)
+	}
+	
+}
+
+const score2 = () => {
+	
+	if(Number(scoreNum.innerText) == 0){
+		scoreNum.innerText = Number(scoreNum.innerText)+40
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 20){
+		scoreNum.innerText = Number(scoreNum.innerText)+20
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 60){
+		scoreNum.innerText = Number(scoreNum.innerText)-20
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 80){
+		scoreNum.innerText = Number(scoreNum.innerText)-40
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 100){
+		scoreNum.innerText = Number(scoreNum.innerText)-60
+		console.log(scoreNum.innerText)
+	}
+	
+}
+
+const score3 = () => {
+	
+	if(Number(scoreNum.innerText) == 0){
+		scoreNum.innerText = Number(scoreNum.innerText)+60
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 20){
+		scoreNum.innerText = Number(scoreNum.innerText)+40
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 40){
+		scoreNum.innerText = Number(scoreNum.innerText)+20
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 80){
+		scoreNum.innerText = Number(scoreNum.innerText)-20
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 100){
+		scoreNum.innerText = Number(scoreNum.innerText)-40
+		console.log(scoreNum.innerText)
+	}
+	
+}
+
+const score4 = () => {
+	
+	if(Number(scoreNum.innerText) == 0){
+		scoreNum.innerText = Number(scoreNum.innerText)+80
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 20){
+		scoreNum.innerText = Number(scoreNum.innerText)+60
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 40){
+		scoreNum.innerText = Number(scoreNum.innerText)+40
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 60){
+		scoreNum.innerText = Number(scoreNum.innerText)+20
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 100){
+		scoreNum.innerText = Number(scoreNum.innerText)-20
+		console.log(scoreNum.innerText)
+	}
+	
+}
+
+const score5 = () => {
+	
+	if(Number(scoreNum.innerText) == 0){
+		scoreNum.innerText = Number(scoreNum.innerText)+100
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 20){
+		scoreNum.innerText = Number(scoreNum.innerText)+80
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 40){
+		scoreNum.innerText = Number(scoreNum.innerText)+60
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 60){
+		scoreNum.innerText = Number(scoreNum.innerText)+40
+		console.log(scoreNum.innerText)
+	} else if(Number(scoreNum.innerText) == 80){
+		scoreNum.innerText = Number(scoreNum.innerText)+20
+		console.log(scoreNum.innerText)
+	}
+	
+}
+
+star1.onclick = score1
+star2.onclick = score2
+star3.onclick = score3
+star4.onclick = score4
+star5.onclick = score5
