@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.db.MovieMapper">
+
+	<insert id="insertMovie" parameterType="MovieVO">
+		insert into movies
+		values(movie_num.nextval, #{movie_title}, #{genre}, #{movie_date},
+		#{director}, #{actors},
+		#{poster_link}, #{movie_rate}, #{synopsis}, #{trailer}, #{movie_age})
+	</insert>
+
+	<select id="showMovie" resultType="MovieVO">
+		select * from movies
+	</select>
+</mapper>

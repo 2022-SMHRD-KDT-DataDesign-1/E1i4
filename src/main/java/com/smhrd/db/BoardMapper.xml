@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.smhrd.db.BoardMapper">
+  	
+  	<!-- <select id="detailBoard" parameterType="int" resultType="BoardVO">
+  		select * from web_board where num = #{num}
+  	</select> -->
+  	<select id="showReview" resultType="BoardVO">
+  		select * from memberinfo
+  	</select>
+  	
+  	<insert id="insertReview" parameterType="BoardVO">
+  		insert into memberinfo(r_num, member_id, movie_id, member_rate) values(R_NUM.nextval, #{member_id}, #{movie_id}, #{member_rate})
+  	</insert>
+
+  </mapper>
