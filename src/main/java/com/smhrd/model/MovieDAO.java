@@ -27,4 +27,16 @@ public class MovieDAO {
 		
 		return list;
 	}
+	
+	// 상세페이지 - 영화 정보
+	public MovieVO SelectMovie(MovieVO vo){
+		
+		MovieVO movie_one = null;
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		movie_one = sqlSession.selectOne("com.smhrd.db.MovieMapper.SelectMovie", vo);
+		sqlSession.close();
+		
+		return movie_one;
+	}
 }

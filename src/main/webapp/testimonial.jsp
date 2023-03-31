@@ -29,33 +29,43 @@
  <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-black navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><!-- <i class="fa fa-book me-3"> --></i>REVVIA</h2>
+            <h2 class="m-0 text-primary">REVVIA</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <!-- <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item active">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a> -->
+                <div class="search-area">
+                    <input type="text" class="serach-input" name="" placeholder="search">
+                    <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+                
+                <div class="nav-item dropdown" style="margin-left: 50px">
+                    <a href="" class="btn btn-primary py-4 d-none d-lg-block nav-link-dropdown-toggle" data-bs-toggle="dropdown" style="margin-right: 30px">000<!--<i class="fa fa-arrow-right ms-3"></i>--></a>
+                    <div class="dropdown-menu fade-down m-0" style="text-align: center; min-width: 80px; right: 11px; padding: 3px; position:absolute;">
+                        <a href="" class="dropdown-item">보관함</a>
+                        <a href="" class="dropdown-item">설정</a>
+                        <a href="" class="dropdown-item">로그아웃</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a> -->
         </div>
     </nav>
     <!-- Navbar End -->
 
 
     <!-- Header Start -->
+    <%
+    	
+    %>
     <div>
          
         <!-- 예고편 -->
@@ -63,11 +73,13 @@
         <!-- 영화정보  -->
         <div class="movie_import">
          <p id="movie_date">2019</p>
+         <p id="movie_age">관람 등급 : 00</p>
          <p id="movie_genre">드라마</p>               
          <P id="movie_title">기생충</P>
              <!-- 총 평점 -->
              <p class="all-score">⭐ 9.9</p>
         <!-- 찜 -->   
+        <form action="">
         <ul class="tg-list">
             <li class="tg-list-item">
                 <input class="tgl tgl-flip" id="cb5" type="checkbox" /><label class="tgl-btn" data-tg-off="찜❤" data-tg-on="저장💕" for="cb5"></label>
@@ -77,6 +89,7 @@
                 <span class="tgNum">0</span>
             </li>
         </ul>
+        </form>
         <P id="movie_actor">주연배우 : OOO</P>         
          <P id="movie_story">반지하에서 근근이 먹고 살던 가족. 우연히 생긴 알바로 부잣집에 발을 들이더니, 어느덧 온 식구가 저택 곳곳의 밥줄을 꿰찬다. 공간도 세간도 남아돌잖아요. 그러니 우리 같이 나눠 씁시다.</P>
           <br>   
