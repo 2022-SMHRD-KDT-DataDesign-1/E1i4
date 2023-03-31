@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="login.css" />
 <title>사용자 로그인</title>
 </head>
-<body>
+<body style=background-size="cover">
 	<div class="container">
 		<div class="login">
 			<p class="logo">RIVVIA</p>
