@@ -45,9 +45,9 @@
 
 
     <!-- 상단바 -->
-    <nav class="navbar navbar-expand-lg bg-black navbar-light shadow sticky-top p-0">
+    <!-- <nav class="navbar navbar-expand-lg bg-black navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h1 class="m-0 text-primary" ><!--<i class="fa fa-book me-3"></i>-->REVVIA</h1>
+            <h1 class="m-0 text-primary" ><i class="fa fa-book me-3"></i>REVVIA</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -68,7 +68,37 @@
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
-    </nav>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg bg-black navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary">REVVIA</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <!-- <a href="index.html" class="nav-item nav-link active">Home</a> -->
+                <!-- search-btn -->
+                <div class="search-area">
+                    <input type="text" class="serach-input" name="" placeholder="search">
+                    <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+
+                
+                <div class="nav-item dropdown" style="margin-left: 50px">
+                    <a href="" class="btn btn-primary py-4 d-none d-lg-block nav-link-dropdown-toggle" data-bs-toggle="dropdown" style="margin-right: 30px">독고운<!--<i class="fa fa-arrow-right ms-3"></i>--></a>
+                    <div class="dropdown-menu fade-down m-0" style="text-align: center; min-width: 80px; right: 11px; padding: 3px; position:absolute;">
+                        <a href="" class="dropdown-item">보관함</a>
+                        <a href="" class="dropdown-item">설정</a>
+                        <a href="" class="dropdown-item">로그아웃</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </nav>
     <!-- 상단바 끝 -->
 
 
@@ -256,7 +286,7 @@
 
     <!-- Footer Start -->
     <div class="container-fluid bg-black text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
+        <!-- <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
@@ -307,6 +337,32 @@
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="movie name">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">send</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <h6>서비스 소개 | 개인정보 처리 방침 | 이용약관 | 고객센터 | 채용정보</h6><br>
+                        <span style="word-break:break-all">E1I4 주식회사 | 대표이사 독고운</span><br>
+                        <span>고객센터 1588-8282 (평일 09:00~18:00 / 점심시간 12:50~14:10 / 주말 및 공휴일 휴무)</span><br>
+                        <span>사업자등록번호 220-88-38020 | 호스팅서비스제공자 : 스마트인재개발원</span><br>
+                        <span>광주광역시 동구 예술길 31-15 4층 D반 | 전자우편주소 : godoli@smhrd.com</span><br>
+                        &copy; <a class="border-bottom" href="#">REVVIA</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">DGO</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">E1I4</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
                     </div>
                 </div>
             </div>

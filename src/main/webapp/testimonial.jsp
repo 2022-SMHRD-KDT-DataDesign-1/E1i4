@@ -89,7 +89,11 @@
                 <span class="tgNum">0</span>
             </li>
         </ul>
+<<<<<<< HEAD
         </form>
+=======
+        <!-- 찜 누르면 테이블에 1 저장 누르면 0으로 -->
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4.git
         <P id="movie_actor">주연배우 : OOO</P>         
          <P id="movie_story">반지하에서 근근이 먹고 살던 가족. 우연히 생긴 알바로 부잣집에 발을 들이더니, 어느덧 온 식구가 저택 곳곳의 밥줄을 꿰찬다. 공간도 세간도 남아돌잖아요. 그러니 우리 같이 나눠 씁시다.</P>
           <br>   
