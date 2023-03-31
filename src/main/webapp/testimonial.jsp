@@ -1,3 +1,5 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.model.MovieVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -63,21 +65,25 @@
 
 
     <!-- Header Start -->
-    <%
-    	
-    %>
+
     <div>
+         <%
+         	MovieVO movie_one = (MovieVO)session.getAttribute("movie_one");
          
+         	if(movie_one != null){
+         		System.out.print(movie_one.getMovie_title());
+         	}
+         %>
         <!-- 예고편 -->
-        <div class="trailer" muted="false" data-vbg-autoplay="true" data-vbg="https://youtu.be/jBdRhhSt3Bc"></div>
+        <div class="trailer" muted="false" data-vbg-autoplay="true" data-vbg="https://youtu.be/jBdRhhSt3Bc<%-- <%= movie_one.getTrailer()%> --%>"></div>
         <!-- 영화정보  -->
         <div class="movie_import">
-         <p id="movie_date">2019</p>
-         <p id="movie_age">관람 등급 : 00</p>
-         <p id="movie_genre">드라마</p>               
-         <P id="movie_title">기생충</P>
+         <p id="movie_date">2019<%-- <%= movie_one.getMovie_date() %> --%></p>
+         <p id="movie_age">관람 등급 : 12<%-- <%= movie_one.getMovie_age() %> --%></p>
+         <p id="movie_genre">드라마 <%-- <%= movie_one.getGenre() %> --%></p>               
+         <P id="movie_title">기생충<%-- <%= movie_one.getMovie_title() %> --%></P>
              <!-- 총 평점 -->
-             <p class="all-score">⭐ 9.9</p>
+             <p class="all-score">⭐ 9.9<%-- <%= movie_one.getMovie_rate() %> --%></p>
         <!-- 찜 -->   
         <form action="">
         <ul class="tg-list">
@@ -89,13 +95,13 @@
                 <span class="tgNum">0</span>
             </li>
         </ul>
-<<<<<<< HEAD
+
         </form>
-=======
+
         <!-- 찜 누르면 테이블에 1 저장 누르면 0으로 -->
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4.git
-        <P id="movie_actor">주연배우 : OOO</P>         
-         <P id="movie_story">반지하에서 근근이 먹고 살던 가족. 우연히 생긴 알바로 부잣집에 발을 들이더니, 어느덧 온 식구가 저택 곳곳의 밥줄을 꿰찬다. 공간도 세간도 남아돌잖아요. 그러니 우리 같이 나눠 씁시다.</P>
+
+        <P id="movie_actor">주연배우 : 000 <%-- <%= movie_one.getActors() %> --%></P>         
+         <P id="movie_story"><%-- <%= movie_one.getSynopsis() %> --%></P>
           <br>   
              <!-- 사용자 별점 -->
              <p>사용자평</p>
