@@ -28,6 +28,13 @@ public class MemberDAO {
 		
 		return cnt;
 	}
+	public MemberVO login(MemberVO vo) {
+		MemberVO login_vo = null;
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		login_vo = sqlSession.selectOne("selectOne", vo);
+		sqlSession.close();
+		return login_vo;
+	}
 	
 	// 회원정보수정
 	public int updateMember(MemberVO vo) {

@@ -1,12 +1,12 @@
 /********** Template CSS **********/
 :root {
-    --primary: #c507c5;
+    --primary: #7c7c7c;
     --light: #F0FBFC;
     --dark: #fafafa;
 }
 
 body{
-    background-color: #302f2f;
+    background-color: #1e1e1e;
 }
 
 .fw-medium {
@@ -584,7 +584,7 @@ th:nth-of-type(4) {color:gray;}
   
   
   /* 해석영상 */
-  .container3{margin: 100px 0px 0px 0px;}
+  .container3{margin: 100px 0px -450px 0px;}
   #interpretation1{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
   #interpretation1[poster]{width:400px ; height:300px;}
   #title9{ color: white;margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
@@ -598,4 +598,3 @@ th:nth-of-type(4) {color:gray;}
   #interpretation4[poster]{width:400px ; height:300px;}
   #title12{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
   
-

@@ -1,16 +1,38 @@
 package com.smhrd.controller;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.command.Command;
+import com.smhrd.model.MemberDAO;
+import com.smhrd.model.MemberVO;
 
-public class JoinService implements Command{
+public class JoinService implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		String moveURL = "";
+		String member_id = request.getParameter("member_id");
+		String member_pw = request.getParameter("member_pw");
+		String nickname = request.getParameter("nickname");
+		String gender = request.getParameter("gender");
+		String member_pwck = request.getParameter("member_pwck");
+		System.out.println(member_id + member_pw + nickname + gender + member_pwck);
+		MemberVO vo = new MemberVO (member_id, member_pw, nickname, gender,member_pwck);
+	     MemberDAO dao = new MemberDAO();
+	      int cnt =dao.insertMember(vo);		      
+	      if(cnt > 0) {
+	          System.out.println("회원가입 성공");
+	          //RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+	          //request.setAttribute("joinEmail", email);
+	          
+	       } else {
+	          System.out.println("회원가입 실패");
+	         
+	       }
+	      moveURL = "Login.jsp";
+	      return moveURL;
+	}	
 	
 }
