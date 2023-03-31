@@ -8,7 +8,8 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: "Montserrat", sans-serif;
-	background-color: #1e1e1e;
+	background-color: black;
+	
 }
 
 .container {
@@ -22,12 +23,27 @@ body {
 input {
 	display: block;
 }
+
+h1,h3{
+	color:white;
+}
+
+#info_id{
+	
+	transform: translateY(-30px);
+	margin: 0px 0px 0px 260px;
+	border-radius: 3px;
+	background: #efefef;
+	background-color: #c657e1;
+	border: #c657e1
+	
+}
+
 /* 이메일 패스워드 */
 form input[type="text"], input[type="password"] {
 	padding: 10px;
 	font-family: "Montserrat", sans-serif;
-	width: 319px;
-	
+	width: 319px;	
 	text-align: center;
 	margin: 20px auto;
 	background: #efefef;
@@ -35,6 +51,7 @@ form input[type="text"], input[type="password"] {
 	border-radius: 11px;
 	outline: none;
 }
+
 
 input[type="text"]:focus, input[type="password"]:focus {
 	border-color: black;
@@ -45,7 +62,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 	background-image: url("/img/user.png");
 	background-repeat: no-repeat;
 	background-position: 13px;
-	text-indent: 17px;
+	text-indent: 8px;
+	
 }
 
 /*패스워드 입력부분  */
@@ -54,6 +72,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 	background-repeat: no-repeat;
 	background-position: 13px;
 	text-indent: 17px;
+	
 }
 /*회원 가입 부분  */
 #join {
@@ -65,12 +84,17 @@ input[type="text"]:focus, input[type="password"]:focus {
 	margin: 0px 0px 0px 150px;
 	border-radius: 11px;
 	color: white;
+	cursor:pointer;
+	
 }
 
+
+/* 성별 */
 .gender {
 	color: white;
 	display: inline-flex;
 	margin: 0px 0px 0px 115px;
+	
 }
 /* 로그인 기억하기 버튼*/
 #remember-me {
@@ -78,6 +102,11 @@ input[type="text"]:focus, input[type="password"]:focus {
 	vertical-align: middle;
 	margin-left: 5px;
 }
+
+/* 닉네임 */
+
+
+
 
 /* 로그인 기억하기 */
 #rememberme {
@@ -107,6 +136,7 @@ input[type="submit"] {
 	border-radius: 11px;
 	border: 0;
 	color: white;
+	cursor:pointer;
 }
 /*제목 RIVVIA  */
 .logo {
@@ -117,4 +147,11 @@ input[type="submit"] {
 	text-align: center;
 	padding-bottom: 10px;
 	color: #c657e1;
+	
+}
+
+
+.joinck{
+	height:100px;
+	background-color: #1e1e1e;
 }

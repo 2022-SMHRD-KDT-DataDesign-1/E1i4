@@ -4,10 +4,10 @@ public class MemberVO {
 	private String member_id;
 	private String member_pw;
 	private String nickname;
-	private String member_pwck;
 	private String gender;
+	private String member_pwck;
 
-	public MemberVO(String member_id, String member_pw, String nickname, String member_pwck, String gender) {
+	public MemberVO(String member_id, String member_pw, String nickname, String gender, String member_pwck) {
 		super();
 		this.member_id = member_id;
 		this.member_pw = member_pw;

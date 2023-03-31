@@ -14,13 +14,17 @@
 		<div class="login">
 			<p class="logo">RIVVIA</p>
 			<form class="login-form" action="JoinService.do" method="POST">
-
-				<input id="username" type="text" name="member_id"
-					placeholder="이메일(example@gmail.com)" autofocus="autofocus"
-					autocomplete="off" /> <input id="nickname" type="text"
+				
+					<input id="username" type="text" name="member_id"
+					placeholder="아이디 입력 (6~20자)" autofocus="autofocus"
+					autocomplete="off" />				
+				
+					<input id="nickname" type="text"
 					name="nickname" placeholder="닉네임" autofocus="autofocus"
-					autocomplete="off" /> <input id="password" type="password"
-					name="member_pw" placeholder="비밀번호" /> <input id="password"
+					autocomplete="off" /> 
+					<input id="password" type="password"
+					name="member_pw" placeholder="비밀번호" /> 
+					<input id="password"
 					type="password" name="member_pwck" placeholder="비밀번호확인" />
 
 				<div class="gender">

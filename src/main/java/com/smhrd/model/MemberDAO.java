@@ -23,7 +23,7 @@ public class MemberDAO {
 	// 로그인
 	public int insertMember(MemberVO vo) {
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		int cnt = sqlSession.insert("insertMember", vo);
+		int cnt = sqlSession.insert("com.smhrd.db.MemberMapper.insertMember", vo);
 		sqlSession.close();
 		
 		return cnt;
