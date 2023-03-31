@@ -5,17 +5,15 @@
 	;
 
 body {
-	margin: 0;
-	padding: 0;
-	font-family: "Montserrat", sans-serif;
+	position: static;
+  margin: 0px auto;
+  padding: 0;
+  font-family: "Montserrat", sans-serif; 
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.527), 
+  rgba(0, 0, 0, 10)),
+  url("img/poster.jpg");
+  background-color: #000;/* 까만색(0,0,0) */    
 
-  	background-image:  linear-gradient(rgba(0, 0, 0, 0.527), 
-  	rgba(0, 0, 0, 0.5)),
-  	url("img/영화관.jpg");
-  	background-color: #000;
-  	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
 	
 }
 
@@ -25,6 +23,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	width: 100%;
+	font-size:20px;
 }
 
 input {
@@ -87,8 +86,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 	font-size: 13px;
 	background-color: black;
 	border: black;
-	height: 50px;
-	margin: 0px 0px 0px 150px;
+	margin: -40px 0px 0px 150px;
 	border-radius: 11px;
 	color: white;
 	cursor:pointer;
@@ -147,18 +145,33 @@ input[type="submit"] {
 }
 /*제목 RIVVIA  */
 .logo {
-	font-style: normal;
-	font-weight: bold;
-	font-size: 35px;
-	line-height: 0px;
-	text-align: center;
-	padding-bottom: 10px;
-	color: #c657e1;
+	font-style: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: -1px;
+  text-align: left;
+  padding-bottom: 10px;
+  color: #c657e1;
+  margin: 0px 0px 0px 22px;
+  cursor:pointer;
+  text-decoration: none;
+	
 	
 }
+.logo_login{
+	font-size: 30px;
+	color : #c657e1;
+	transform: translateY(-100px);
+	text-align:center;
+}
 
+img.R{
+	transform:translateX("100px");
+}
 
 .joinck{
 	height:100px;
 	background-color: #1e1e1e;
 }
+
+
