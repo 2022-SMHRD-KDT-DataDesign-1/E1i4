@@ -1,0 +1,18 @@
+package com.smhrd.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.smhrd.command.Command;
+
+public class WishService implements Command {
+
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		String like_check = request.getParameter("like_check");
+		
+		return null;
+	}
+
+}

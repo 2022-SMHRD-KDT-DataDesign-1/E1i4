@@ -85,7 +85,7 @@
              <!-- 총 평점 -->
              <p class="all-score">⭐ 9.9<%-- <%= movie_one.getMovie_rate() %> --%></p>
         <!-- 찜 -->   
-        <form action="">
+        <form action="WishService.do" method="post">
         <ul class="tg-list">
             <li class="tg-list-item">
                 <input class="tgl tgl-flip" id="cb5" type="checkbox" /><label class="tgl-btn" data-tg-off="찜❤" data-tg-on="저장💕" for="cb5"></label>

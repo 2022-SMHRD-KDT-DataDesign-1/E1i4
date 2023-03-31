@@ -39,6 +39,12 @@ public class teamVO {
 			this.trailer = trailer;
 			this.movie_age = movie_age;
 		}
+		
+		public teamVO() {
+			
+		}
+		
+		
 		public String getMovie_id() {
 			return movie_id;
 		}

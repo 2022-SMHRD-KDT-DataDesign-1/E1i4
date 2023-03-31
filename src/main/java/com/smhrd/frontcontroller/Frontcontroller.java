@@ -16,6 +16,7 @@ import com.smhrd.controller.JoinService;
 import com.smhrd.controller.LoginService;
 import com.smhrd.controller.LogoutService;
 import com.smhrd.controller.UpdateService;
+import com.smhrd.controller.WishService;
 
 @WebServlet("*.do")
 public class Frontcontroller extends HttpServlet {
@@ -55,6 +56,9 @@ public class Frontcontroller extends HttpServlet {
 	      }else if (result.equals("DetailService.do")) {
 	    	  //상세페이지 - 영화정보 서비스
 	    	  service = new DetailService();
+	      }else if (result.equals("WishService.do")) {
+	    	  //찜 기능
+	    	  service = new WishService();
 	      }
 		String moveURL= service.execute(request, response);
 		response.sendRedirect(moveURL);
