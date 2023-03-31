@@ -16,9 +16,4 @@
 		select * from movies
 	</select>
 	
-	<!-- 상세페이지 - 영화 정보 -->
-	<select id="SelectMovie" resultType="MovieVO" parameterType="MovieVO">
-		select * from movies where movie_id=#{movie_id}
-	</select>
-	
 </mapper>

@@ -500,6 +500,8 @@ transform: rotateY(20deg);
 
 /* 별점 */
 
+
+
 p {
  text-align: left;
  display: flex;
@@ -508,6 +510,8 @@ p {
  color: #ffffff;
  bottom-left: 0;
 }
+ 
+#user_com{margin: 70px 0px 0px 60px;}
   
 .star-source span{margin-top: 60px; margin-left: 100px; text-align: left; color: #ffffff;}
 .star-source { position: absolute; top: 50%; width: 100%; top: 50px;}
@@ -528,7 +532,7 @@ input[name="star"] {display: inline-block; width: 0; opacity: 1; margin-left: -2
 .star { color: transparent; transition: color 0.2s ease-in-out; }
   
 /* 위치.. set direction to row-reverse so 5th star is at the end and ~ can be used to fill all sibling stars that precede last starred element*/
-#star-container { box-sizing: border-box; display: flex; flex-direction: row-reverse; justify-content: left; margin:-45px 0px 0px 125px;}
+#star-container { box-sizing: border-box; display: flex; flex-direction: row-reverse; justify-content: left; margin:-45px 0px 0px 135px;}
 
 label:hover ~ label .star,svg.star:hover,input[name="star"]:focus ~ label .star,input[name="star"]:checked ~ label .star {color: #d62a9d;}
 
@@ -541,8 +545,68 @@ input[name="star"]:checked + label {animation: scaleup 1s;}
 @keyframes starred {from {color: #600040;}to {color: #d62a9d;}}
 
 /* 댓글 입력창 */
-.comment{margin: -70px 0px 0px 0px;}
-#inputCom {margin: 25px 0px 10px -310px; width: 250px; height: 30px;}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+.commentS {
+  position: relative;
+  display: inline-block;
+  margin: 30px 10px;
+}
+
+.card-slide {
+  display: inline-block;
+  width: 215px;
+  padding: 0px 0 8px -243px;
+  margin: 0px 0px 0px -300px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color:  #C657E1;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 115px;
+  transition: all 0.3s ease-in-out;
+}
+.card-slide::-webkit-input-placeholder {
+  color: #efefef;
+  text-indent: 0;
+  font-weight: 300;
+}
+.card-slide + label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1px 20px;
+  margin: 1px 0px 0px -301px;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: #d62a9d;
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  transform-origin: right center;
+  transform: perspective(300px) scaleX(1) rotateY(0deg);
+}
+
+.card-slide:focus,
+.card-slide:active {
+  color: #377D6A;
+  text-indent: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.card-slide:focus::-webkit-input-placeholder,
+.card-slide:active::-webkit-input-placeholder {
+  color: #aaa;
+}
+.card-slide:focus + label,
+.card-slide:active + label {
+  transform: perspective(600px) translateX(-100%) rotateY(80deg);
+}
+.comment{margin: -73px 0px -22px 0px;}
+#submit{margin: 0px 0px 0px 30px; border-radius: 3px}
+
 /* 댓글 게시판  */
 #board{display:block; overflow:auto;position:absolute; border: 1px solid black;border-collapse:collapse; color: black; width:630px; height:220px; margin:0px 0px 0px 40px; background-color: whitesmoke; opacity: 0.8;}
 #board th {position: sticky; top:0 ; background-color: gray; text-align: center;}
@@ -550,7 +614,7 @@ th:nth-of-type(4) {color:gray;}
 #board td:nth-child(1) { text-align: center;}
 #board td:nth-child(2) { width: 400px; text-align: left;}
 #board td:nth-child(3) { text-align: center;}
-#board td:nth-child(4) { text-align: center; font-size: 5px}
+#board td:nth-child(4) { text-align: center; font-size: 12px}
 #board tr:nth-child(even) { background-color: #d8d8d8;}
 
   /* 리뷰영상 */
