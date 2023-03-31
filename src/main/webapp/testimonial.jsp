@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.testimonialVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd.model.MovieVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -68,7 +69,7 @@
 
     <div>
          <%
-         	MovieVO movie_one = (MovieVO)session.getAttribute("movie_one");
+         	testimonialVO movie_one = (testimonialVO)session.getAttribute("movie_one");
          
          	if(movie_one != null){
          		System.out.print(movie_one.getMovie_title());
@@ -101,10 +102,16 @@
         <!-- 찜 누르면 테이블에 1 저장 누르면 0으로 -->
 
         <P id="movie_actor">주연배우 : 000 <%-- <%= movie_one.getActors() %> --%></P>         
-         <P id="movie_story"><%-- <%= movie_one.getSynopsis() %> --%></P>
+         <P id="movie_story">"전원백수로 살 길 막막하지만 사이는 좋은 기택(송강호) 가족.
+장남 기우(최우식)에게 명문대생 친구가 연결시켜 준 고액 과외 자리는
+모처럼 싹튼 고정수입의 희망이다.
+온 가족의 도움과 기대 속에 박사장(이선균) 집으로 향하는 기우.
+글로벌 IT기업 CEO인 박사장의 저택에 도착하자
+젊고 아름다운 사모님 연교(조여정)가 기우를 맞이한다.
+그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고 있었으니…"<%-- <%= movie_one.getSynopsis() %> --%></P>
           <br>   
              <!-- 사용자 별점 -->
-             <p>사용자평</p>
+             <p id="user_com">사용자평</p>
            <div class="star-source">
              <svg>
                     <linearGradient x1="50%" y1="5.41294643%" x2="87.5527344%" y2="65.4921875%" id="grad">
@@ -153,8 +160,10 @@
            </div>
            <!-- 댓글 입력 -->
            <form class="comment" action="testimonial.jsp" method="get">
-               <input id="inputCom" type="text" placeholder="댓글 입력...">
-               <input type="submit" value="저장" id="submit"></input>
+                 <span class="commentS">
+    				<input class="card-slide" id="knock" type="text" placeholder="댓글을 입력하세요" /><label for="knock">click!</label>
+		            <input type="submit" value="등록" id="submit"></input>
+  				 </span>
             </form>
           
          <!-- 댓글창 -->
@@ -170,37 +179,37 @@
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
                <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
                <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
                <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
                <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
               <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
            </table>            
          </div>  

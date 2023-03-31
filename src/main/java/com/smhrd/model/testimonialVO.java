@@ -29,6 +29,8 @@ public class testimonialVO {
 	private String youtuber;
 	private String youtube_title;
 	private String youtube_link;
+	
+	
 	public testimonialVO(String board_id, String member_id, String movie_id, String member_comment, String review_date,
 			String r_num, String like_check, String member_rate, String member_pw, String nickname, String gender,
 			String movie_title, String movie_date, String genre, String director, String actors, String poster_link,
@@ -63,6 +65,23 @@ public class testimonialVO {
 		this.youtube_title = youtube_title;
 		this.youtube_link = youtube_link;
 	}
+	
+	// 상세페이지 - 영화 정보
+	public testimonialVO(String movie_id, String movie_title, String genre, String movie_date, String actors,
+			String movie_rate, String synopsis, String trailer, String movie_age) {
+		super();
+		this.movie_id = movie_id;
+		this.movie_title = movie_title;
+		this.genre = genre;
+		this.movie_date = movie_date;
+		this.actors = actors;
+		this.movie_rate = movie_rate;
+		this.synopsis = synopsis;
+		this.trailer = trailer;
+		this.movie_age = movie_age;
+	}
+	
+	//getter	
 	public String getBoard_id() {
 		return board_id;
 	}
