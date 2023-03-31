@@ -7,6 +7,8 @@ import javax.servlet.http.HttpSession;
 import com.smhrd.command.Command;
 import com.smhrd.model.MovieDAO;
 import com.smhrd.model.MovieVO;
+import com.smhrd.model.testimonialDAO;
+import com.smhrd.model.testimonialVO;
 
 public class DetailService implements Command {
 
@@ -15,7 +17,7 @@ public class DetailService implements Command {
 		
 		// 상세페이지 - 영화 정보	
 		
-		MovieVO movie_one = null;
+		testimonialVO movie_one = null;
 		
 		String movie_id = request.getParameter("movie_id");
 		String movie_title = request.getParameter("movie_id");
@@ -27,9 +29,9 @@ public class DetailService implements Command {
 		String trailer = request.getParameter("movie_id");
 		String movie_age = request.getParameter("movie_id");
 		
-		MovieVO vo = new MovieVO(movie_id, movie_title, genre, movie_date, actors, movie_rate, synopsis, trailer, movie_age);
+		testimonialVO vo = new testimonialVO(movie_id, movie_title, genre, movie_date, actors, movie_rate, synopsis, trailer, movie_age);
 		
-		MovieDAO dao = new MovieDAO();
+		testimonialDAO dao = new testimonialDAO();
 		
 		movie_one = dao.SelectMovie(vo);
 		

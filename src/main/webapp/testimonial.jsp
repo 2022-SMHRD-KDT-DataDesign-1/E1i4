@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.testimonialVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd.model.MovieVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -68,7 +69,7 @@
 
     <div>
          <%
-         	MovieVO movie_one = (MovieVO)session.getAttribute("movie_one");
+         	testimonialVO movie_one = (testimonialVO)session.getAttribute("movie_one");
          
          	if(movie_one != null){
          		System.out.print(movie_one.getMovie_title());
@@ -110,7 +111,7 @@
 그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고 있었으니…"<%-- <%= movie_one.getSynopsis() %> --%></P>
           <br>   
              <!-- 사용자 별점 -->
-             <p>사용자평</p>
+             <p id="user_com">사용자평</p>
            <div class="star-source">
              <svg>
                     <linearGradient x1="50%" y1="5.41294643%" x2="87.5527344%" y2="65.4921875%" id="grad">
@@ -159,8 +160,10 @@
            </div>
            <!-- 댓글 입력 -->
            <form class="comment" action="testimonial.jsp" method="get">
-               <input id="inputCom" type="text" placeholder="댓글 입력...">
-               <input type="submit" value="저장" id="submit"></input>
+                 <span class="commentS">
+    				<input class="card-slide" id="knock" type="text" placeholder="댓글을 입력하세요" /><label for="knock">click!</label>
+		            <input type="submit" value="등록" id="submit"></input>
+  				 </span>
             </form>
           
          <!-- 댓글창 -->
@@ -176,37 +179,37 @@
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
                <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
                <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
                <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
                <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
               <tr>
                  <td class="id">test1</td>
                  <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
                  <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">삭제</a></td>
+                 <td class="delete"><a href="">🗑️</a></td>
               </tr>
            </table>            
          </div>  

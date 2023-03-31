@@ -5,9 +5,14 @@
 
 <mapper namespace="com.smhrd.db.testimonialMapper">
 
+	<!-- 상세페이지 - 찜 -->
 	<insert id="uploadBoard" parameterType="BoardVO">
   		insert into MEMBERINFO (LIKECHECK) values("1")
   	</insert>
   	
+	<!-- 상세페이지 - 영화 정보 -->
+	<select id="SelectMovie" resultType="testimonialVO" parameterType="testimonialVO">
+		select * from movies where movie_id=#{movie_id}
+	</select>
 	
 </mapper>
