@@ -16,4 +16,10 @@
 		select * from movies
 	</select>
 	
+	
+	<!-- search -->
+	<select id="searchMovie" resultType="MovieVO" parameterType="String">
+		select * from movies where movie_title like '%'||#{searchKeyword}||'%' 
+	</select>
+	
 </mapper>

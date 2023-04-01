@@ -1,5 +1,6 @@
 package com.smhrd.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -29,4 +30,12 @@ public class MovieDAO {
 	}
 	
 	
+	// search
+	public List<MovieVO> searchMovie(String searchKeyword) {
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		List<MovieVO> list = sqlSession.selectList("searchMovie", searchKeyword);
+		sqlSession.close();
+		
+		return list;
+	}
 }
