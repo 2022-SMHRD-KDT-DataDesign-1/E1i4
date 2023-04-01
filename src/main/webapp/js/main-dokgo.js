@@ -105,12 +105,61 @@
         }
     });
 
-    $('.slick-service-item').slick({
-        slide: 'div',
+    
+    $(".slick-service-item").slick({
         slidesToShow: 4,
         slidesToScroll: 4,
-        nextArrow:$('.next'),
-        prevArrow:$('.prev'),
+        // arrows: false,
+        nextArrow:$(".next"),
+        prevArrow:$(".prev"),
+        
+        responsive: [ 
+            {  
+                breakpoint: 960,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                } 
+            },
+            { 
+                breakpoint: 768,
+                settings: {	
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                } 
+            }
+        ]
+    });
+    
+    $(".prev").click(function () {
+        console.log("prev1")
+        $('.slick-service-item').slick('slickPrev');
+    });
+
+    $(".next").click(function () {
+        console.log("next1")
+        $('.slick-service-item').slick('slickNext');
+    });
+
+    $("#openBtn").click(function(){
+        $(".modal").removeClass("hidden");
+    });
+    
+    $(".modal__overlay").click(function(){
+        $(".modal").addClass("hidden");
+    });
+
+    $("#closeBtn").click(function(){
+        $(".modal").addClass("hidden");
+    });
+    
+
+    $(".ai-slick-wrapper").slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow:$(".ai-prev"),
+        nextArrow:$(".ai-next"),
+        autoplay: true,
 
         responsive: [ 
             {  
@@ -131,3 +180,5 @@
     });
     
 })(jQuery);
+
+

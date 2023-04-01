@@ -20,16 +20,19 @@ public class DetailService implements Command {
 		testimonialVO movie_one = null;
 		
 		String movie_id = request.getParameter("movie_id");
-		String movie_title = request.getParameter("movie_id");
-		String genre = request.getParameter("movie_id");
-		String movie_date = request.getParameter("movie_id");
-		String actors = request.getParameter("movie_id");
-		String movie_rate = request.getParameter("movie_id");
-		String synopsis = request.getParameter("movie_id");
-		String trailer = request.getParameter("movie_id");
-		String movie_age = request.getParameter("movie_id");
+		String movie_title = request.getParameter("movie_title");
+		String movie_date = request.getParameter("movie_date");
+		String actors = request.getParameter("actors");
+		String movie_rate = request.getParameter("movie_rate");
+		String movie_time = request.getParameter("movie_time");
+		String synopsis = request.getParameter("synopsis");
+		String trailer = request.getParameter("trailer");
+		String movie_age = request.getParameter("movie_age");
+		String movie_genre = request.getParameter("movie_genre");
 		
-		testimonialVO vo = new testimonialVO(movie_id, movie_title, genre, movie_date, actors, movie_rate, synopsis, trailer, movie_age);
+		System.out.println(movie_id+ movie_title+ movie_date+ actors+ movie_rate+ movie_time+ synopsis+ trailer+ movie_age+ movie_genre);
+		
+		testimonialVO vo = new testimonialVO(movie_id, movie_title, movie_date, actors, movie_rate, movie_time, synopsis, trailer, movie_age, movie_genre);
 		
 		testimonialDAO dao = new testimonialDAO();
 		

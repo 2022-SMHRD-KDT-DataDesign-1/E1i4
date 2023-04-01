@@ -31,7 +31,7 @@
 <body>
  <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-black navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index-goun.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h2 class="m-0 text-primary">REVVIA</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -52,7 +52,7 @@
                 <div class="nav-item dropdown" style="margin-left: 50px">
                     <a href="" class="btn btn-primary py-4 d-none d-lg-block nav-link-dropdown-toggle" data-bs-toggle="dropdown" style="margin-right: 30px">000<!--<i class="fa fa-arrow-right ms-3"></i>--></a>
                     <div class="dropdown-menu fade-down m-0" style="text-align: center; min-width: 80px; right: 11px; padding: 3px; position:absolute;">
-                        <a href="" class="dropdown-item">보관함</a>
+                        <a href="team.jsp" class="dropdown-item">보관함</a>
                         <a href="" class="dropdown-item">설정</a>
                         <a href="" class="dropdown-item">로그아웃</a>
                     </div>
@@ -76,12 +76,12 @@
          	}
          %>
         <!-- 예고편 -->
-        <div class="trailer" muted="false" data-vbg-autoplay="true" data-vbg="https://youtu.be/jBdRhhSt3Bc<%-- <%= movie_one.getTrailer()%> --%>"></div>
+        <div class="trailer" muted="false" data-vbg-autoplay="true" data-vbg="https://youtu.be/jBdRhhSt3Bc <%-- <%= movie_one.getTrailer()%> --%>"></div>
         <!-- 영화정보  -->
         <div class="movie_import">
-         <p id="movie_date">2019<%-- <%= movie_one.getMovie_date() %> --%></p>
-         <p id="movie_age">관람 등급 : 12<%-- <%= movie_one.getMovie_age() %> --%></p>
-         <p id="movie_genre">드라마 <%-- <%= movie_one.getGenre() %> --%></p>               
+         <p id="movie_date">2019 <%-- <%= movie_one.getMovie_date()%> --%></p>
+         <p id="movie_age">관람 등급 : 12<%--  <%= movie_one.getMovie_age() %> --%></p>
+         <p id="movie_genre">              
          <P id="movie_title">기생충<%-- <%= movie_one.getMovie_title() %> --%></P>
              <!-- 총 평점 -->
              <p class="all-score">⭐ 9.9<%-- <%= movie_one.getMovie_rate() %> --%></p>
@@ -108,7 +108,7 @@
 온 가족의 도움과 기대 속에 박사장(이선균) 집으로 향하는 기우.
 글로벌 IT기업 CEO인 박사장의 저택에 도착하자
 젊고 아름다운 사모님 연교(조여정)가 기우를 맞이한다.
-그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고 있었으니…"<%-- <%= movie_one.getSynopsis() %> --%></P>
+그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고 있었으니…" <%-- <%= movie_one.getSynopsis() %> --%></P>
           <br>   
              <!-- 사용자 별점 -->
              <p id="user_com">사용자평</p>
