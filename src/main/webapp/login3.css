@@ -6,70 +6,82 @@
 
 body {
 	position: static;
-  margin: 0px auto;
-  padding: 0;
-  font-family: "Montserrat", sans-serif; 
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.527), 
-  rgba(0, 0, 0, 10)),
-  url("img/poster.jpg");
-  background-color: #000;/* 까만색(0,0,0) */    
-
-	
+	margin: 0px auto;
+	padding: 0;
+	font-style: "Montserrat", sans-serif;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.527),
+		rgba(0, 0, 0, 10)), url("img/poster.jpg");
+	background-color: #000; /* 까만색(0,0,0) */
 }
 
 .container {
-	display: flex;
+	display: grid;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	width: 100%;
-	font-size:20px;
+	font-size: 20px;
+}
+
+/*  JoinSuccess.jsp 화면*/
+.container_1 {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(400px);
+	width: 100%;
+	font-size: 20px;
 }
 
 input {
 	display: block;
 }
 
-h1,h3{
-	color:white;
+h1, h3 {
+	color: white;
 }
 
-#info_id{
-	
+#info_id {
 	transform: translateY(-30px);
 	margin: 0px 0px 0px 260px;
 	border-radius: 3px;
 	background: #efefef;
 	background-color: #c657e1;
 	border: #c657e1
-	
 }
 
 /* 이메일 패스워드 */
 form input[type="text"], input[type="password"] {
-	padding: 10px;
-	font-family: "Montserrat", sans-serif;
-	width: 319px;	
-	text-align: center;
+	font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Roboto",
+		Segoe UI, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue,
+		sans-serif;
+	width: 500px;
+	text-align: left;
 	margin: 20px auto;
 	background: #efefef;
-	border: 0;
-	border-radius: 11px;
-	outline: none;
+	background-color: #212121;
+	font-size: inherit;
+	border-radius: 1px;
+	height: 50px;
+	border: none;
 }
 
-
-input[type="text"]:focus, input[type="password"]:focus {
-	border-color: black;
-	box-shadow: 0 0 0 1.2px black;
-}
 /* 이메일 입력 */
 #username {
 	background-image: url("/img/user.png");
 	background-repeat: no-repeat;
 	background-position: 13px;
 	text-indent: 8px;
-	
+	color: white;
+}
+
+/* 아이디 입력 아래 부분 */
+.input_info {
+	margin: 1rem auto;
+	color: #6e6e6e;
+	word-break: keep-all;
+	font-size: 0.9rem;
+	font-weight: bold;
 }
 
 /*패스워드 입력부분  */
@@ -77,30 +89,25 @@ input[type="text"]:focus, input[type="password"]:focus {
 	background-image: url("/img/password.png");
 	background-repeat: no-repeat;
 	background-position: 13px;
-	text-indent: 17px;
-	
-}
-/*회원 가입 부분  */
-#join {
-	display: inline;
-	font-size: 13px;
-	background-color: black;
-	border: black;
-	margin: -40px 0px 0px 150px;
-	border-radius: 11px;
+	text-indent: 8px;
 	color: white;
-	cursor:pointer;
-	
 }
 
-
-/* 성별 */
-.gender {
-	color: white;
-	display: inline-flex;
-	margin: 0px 0px 0px 115px;
-	
+/*패스워드 입력 아래 부분  */
+.input-info.red {
+	margin: 1rem auto;
+	color: #6e6e6e;
+	word-break: keep-all;
+	font-size: 0.9rem;
+	font-weight: bold;
 }
+
+/* 닉네임 join.jsp */
+#nickname {
+	text-indent: 8px;
+	color: white;
+}
+
 /* 로그인 기억하기 버튼*/
 #remember-me {
 	display: inline;
@@ -108,20 +115,18 @@ input[type="text"]:focus, input[type="password"]:focus {
 	margin-left: 5px;
 }
 
-/* 닉네임 */
-
-
-
-
 /* 로그인 기억하기 */
 #rememberme {
 	display: inline;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 13px;
+	font-size: 15px;
+	list-style: none;
 	vertical-align: middle;
-	color: white;
+	color: #6e6e6e;
+	font-weight: bold;
 }
+
 /* 로그인  */
 input[type="submit"] {
 	font-family: Montserrat;
@@ -129,49 +134,82 @@ input[type="submit"] {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
 	font-style: normal;
-	font-weight: 400;
-	font-size: 15px;
 	line-height: 0px;
 	margin-left: 3px;
 	margin-top: 5px;
 	padding: 10px;
-	width: 338px;
-	height: 33px;
+	width: 500px;
+	height: 50px;
 	background-color: #c657e1;
 	border-radius: 11px;
 	border: 0;
 	color: white;
-	cursor:pointer;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: inherit
 }
 /*제목 RIVVIA  */
 .logo {
 	font-style: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: -1px;
-  text-align: left;
-  padding-bottom: 10px;
-  color: #c657e1;
-  margin: 0px 0px 0px 22px;
-  cursor:pointer;
-  text-decoration: none;
-	
-	
-}
-.logo_login{
+	font-weight: bold;
 	font-size: 30px;
-	color : #c657e1;
-	transform: translateY(-100px);
-	text-align:center;
+	line-height: -1px;
+	text-align: left;
+	padding-bottom: 10px;
+	color: #c657e1;
+	margin: 0px 0px 0px 22px;
+	cursor: pointer;
+	text-decoration: none;
+}
+/*  Login_3.jsp 로그인*/
+.logo_login {
+	font-style: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: left;
+	padding-bottom: 10px;
+	color: #c657e1;
+	margin: 0px 0px 0px 0px;
+	cursor: pointer;
+	text-decoration: none;
 }
 
-img.R{
-	transform:translateX("100px");
-}
-
-.joinck{
-	height:100px;
+/* 확인체크 부분   */
+.joinck {
+	height: 200px;
 	background-color: #1e1e1e;
+	transform: translateY(170PX);
+	animation-duration: 2s;
 }
 
+.login_1 {
+	transform: translateY(-300PX);
+}
 
+.info_join {
+	margin-top: 3rem;
+	color: #6e6e6e;
+	text-align: center;
+	font-size: 1.167rem;
+	font-weight: bold;
+}
+
+.start {
+	background-color: #dedede;
+	border-color: #dedede;
+	color:  #c657e1;
+	font-weight: bold;
+    width: 635px;
+    text-align: center;
+    margin: 20px auto;
+    background: #efefef;
+    background-color: #212121;
+    font-size: inherit;
+    border-radius: 1px;
+    border: none;
+    cursor:pointer;
+    padding: 50px 
+	
+	
+	
+}
