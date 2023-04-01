@@ -125,11 +125,11 @@
     <!-- Header End -->
 
 
-	<%-- <%
+	<%
 		teamDAO dao = new teamDAO();
 		List<teamVO> list = dao.wishList();
-		// System.out.print(list.size());
-	%>  --%>
+		System.out.print(list.size());
+	%>  
 					   <%-- <%for(MemberVO m : list){ %>
 							<tr>
 								<td><%=m.getEmail()%></td>
@@ -146,12 +146,12 @@
                 <h1 class="mb-5">내가 찜한 영화</h1>
             </div>
             <div class="row g-4">
-            	<%-- <%for(teamVO m : list){ %>
+            	<%for(teamVO m : list){ %>
             	<%double num = 0.1;%>
 				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="<%=num%>s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">  <!-- 찜한영화 DB에서 불러오기 -->
-                            <img class="img-fluid" src=<%=m.getPoster_link()%> >
+                            <a href = "testimonial.jsp"><img class="img-fluid" src=<%=m.getPoster_link()%> ></a>
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         </div>
@@ -159,11 +159,11 @@
                     </div>
                 </div>
                 <% num += 0.2; %>
-				<%} %>  --%>
+				<%} %>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">  <!-- 찜한영화 DB에서 불러오기 -->
-                            <img class="img-fluid" src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg" >
+                            <a href = "testimonial.jsp"><img class="img-fluid" src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg" ></a>
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         </div>
@@ -217,7 +217,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20160106_138/1452044846608eaFcJ_JPEG/movie_image.jpg" alt="">
@@ -235,7 +235,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20221216_283/1671153488789d3g4j_JPEG/movie_image.jpg" alt="">
@@ -254,7 +254,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20220920_244/1663641181915y0nJN_JPEG/movie_image.jpg " alt="">
@@ -272,7 +272,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.5s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20221215_185/1671091761840XXpCR_JPEG/movie_image.jpg " alt="">

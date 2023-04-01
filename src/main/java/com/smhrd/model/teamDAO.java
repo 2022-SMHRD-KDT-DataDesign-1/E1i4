@@ -1,5 +1,6 @@
 package com.smhrd.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;

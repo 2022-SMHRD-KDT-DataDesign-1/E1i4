@@ -52,7 +52,7 @@
                 <div class="nav-item dropdown" style="margin-left: 50px">
                     <a href="" class="btn btn-primary py-4 d-none d-lg-block nav-link-dropdown-toggle" data-bs-toggle="dropdown" style="margin-right: 30px">000<!--<i class="fa fa-arrow-right ms-3"></i>--></a>
                     <div class="dropdown-menu fade-down m-0" style="text-align: center; min-width: 80px; right: 11px; padding: 3px; position:absolute;">
-                        <a href="" class="dropdown-item">보관함</a>
+                        <a href="team.jsp" class="dropdown-item">보관함</a>
                         <a href="" class="dropdown-item">설정</a>
                         <a href="" class="dropdown-item">로그아웃</a>
                     </div>
@@ -90,12 +90,12 @@
         <ul class="tg-list">
             <li class="tg-list-item">
                 <input class="tgl tgl-flip" id="cb5" type="checkbox" /><label class="tgl-btn" data-tg-off="찜❤" data-tg-on="저장💕" for="cb5"></label>
+                <input type="submit" value = "ddd">
             </li>
             <li>
                 <span class="tgNum">0</span>
-                <span class="tgNum">0</span>
             </li>
-        </ul>
+        </ul> 
 
         </form>
 

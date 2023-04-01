@@ -21,4 +21,16 @@ public class testimonialDAO {
 			
 			return movie_one;
 		}
+		
+	// 찜기능	
+		public int likeCheck(testimonialVO vo) {
+			
+			int cnt = 0;
+			
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			cnt = sqlSession.insert("likeCheck", vo);
+			sqlSession.close();
+			
+			return cnt;
+		}
 }

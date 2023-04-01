@@ -81,6 +81,12 @@ public class testimonialVO {
 		this.movie_age = movie_age;
 	}
 	
+	public testimonialVO(String like_check) {
+		
+		this.like_check = like_check;
+		
+	}
+
 	//getter	
 	public String getBoard_id() {
 		return board_id;
