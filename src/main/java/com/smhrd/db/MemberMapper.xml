@@ -10,7 +10,7 @@
 	</select>
 
 	<insert id ="insertMember" parameterType="MemberVO" >
-		 insert into members values(#{member_id},#{member_pw},#{nickname},#{gender},#{member_pwck}) 
+		 insert into members values(#{member_id},#{member_pw},#{nickname},#{member_pwck}) 
 	</insert> 
 	
 	<select id="selectOne" resultType="MemberVO" parameterType="MemberVO">

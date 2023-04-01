@@ -16,10 +16,9 @@ public class JoinService implements Command {
 		String member_id = request.getParameter("member_id");
 		String member_pw = request.getParameter("member_pw");
 		String nickname = request.getParameter("nickname");
-		String gender = request.getParameter("gender");
 		String member_pwck = request.getParameter("member_pwck");
-		System.out.println(member_id + member_pw + nickname + gender + member_pwck);
-		MemberVO vo = new MemberVO (member_id, member_pw, nickname, gender,member_pwck);
+		System.out.println(member_id + member_pw + nickname  + member_pwck);
+		MemberVO vo = new MemberVO (member_id, member_pw, nickname,member_pwck);
 	     MemberDAO dao = new MemberDAO();
 	     int cnt =dao.insertMember(vo);		      
 	     

@@ -12,7 +12,7 @@ public class LogoutService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();
   		session.invalidate();
-  		return "Login.jsp";
+  		return "Login_3.jsp";
 	}
 	
 }
