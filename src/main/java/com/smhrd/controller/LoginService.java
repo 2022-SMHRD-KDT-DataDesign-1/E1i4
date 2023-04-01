@@ -12,7 +12,8 @@ public class LoginService implements Command{
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		 MemberVO login_vo = null;		
+		String moveURL = "";
+		MemberVO login_vo = null;		
 		 String member_id = request.getParameter("member_id");
 	     String member_pw = request.getParameter("member_pw");			
 	     System.out.println(member_id+member_pw);
@@ -23,11 +24,13 @@ public class LoginService implements Command{
 	    	  System.out.println("로그인 성공");
 	    	  HttpSession session = request.getSession();
 	    	  session.setAttribute("login_vo", login_vo);
+	    	  moveURL="index-goun.html";
 	      }else {
+	    	
 	    	  System.out.println("로그인 실패 ");
-	    	  
+	    	  moveURL="Login_3.jsp";
 	      }
-	      return "index-goun.html";
+	      return moveURL;
 	}
 	
 }

@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <link rel="stylesheet" href="login3.css" />
+
 <title>사용자 로그인</title>
 </head>
 <body>
@@ -20,15 +21,12 @@
 					placeholder="아이디 입력 (6~20자)" autofocus="autofocus"
 					autocomplete="off" /> 
 					
-					
-					
+								
 					
 					<input id="password" type="password"
 					name="member_pw" placeholder="비밀번호" /> 
 					
-					
-					
-					
+															
 					<input type="checkbox"
 					id="remember-me" name="remember-me" value="true" />
 				<p id="rememberme">자동로그인</p>
@@ -42,5 +40,10 @@
 			</form>
 		</div>
 	</div>
+	
+	
+	<script src="lib/background/background.js"></script>
+	
+	
 </body>
 </html>

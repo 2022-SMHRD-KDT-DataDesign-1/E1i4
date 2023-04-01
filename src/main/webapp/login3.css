@@ -172,6 +172,7 @@ input[type="submit"] {
 	margin: 0px 0px 0px 0px;
 	cursor: pointer;
 	text-decoration: none;
+	
 }
 
 /* 확인체크 부분   */
@@ -213,3 +214,5 @@ input[type="submit"] {
 	
 	
 }
+
+
