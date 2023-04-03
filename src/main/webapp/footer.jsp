@@ -37,9 +37,7 @@
 
 <body>
 	<!-- Footer Start -->
-	<div
-		class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
-		data-wow-delay="0.1s">
+	<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
 		<div class="container">
 			<div class="copyright">
 				<div class="row">
@@ -59,8 +57,10 @@
 					</div>
 					<div class="col-md-6 text-center text-md-end">
 						<div class="footer-menu">
-							<a href="">Home</a> <a href="">Cookies</a> <a href="">Help</a> <a
-								href="">FQAs</a>
+							<a href="">Home</a> 
+							<a href="">Cookies</a> 
+							<a href="">Help</a> 
+							<a href="">FQAs</a>
 						</div>
 					</div>
 				</div>
