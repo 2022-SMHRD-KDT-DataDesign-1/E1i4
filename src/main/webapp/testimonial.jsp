@@ -160,49 +160,25 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
                 <h1 class="mb-5">리뷰</h1>
             </div>
+               <div class="owl-carousel testimonial-carousel position-relative">
             <%for(int i = 0 ; i < youtube_list.size(); i++){ %>
                <%if(movie_one.getMovie_id().equals(youtube_list.get(i).getMovie_id())){%>
                   <%if(youtube_list.get(i).getYoutube_type().equals("영화리뷰")) {%>
-                  <%int num = 1;%>
-               <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
                     <!-- 유튜버 로고 -->
                     <img class="border rounded-circle p-2 mx-auto mb-3" src="<%=youtube_list.get(i).getYoutuberimg_link() %>.jpg" style="width: 80px; height: 80px;">
                     <!-- 유튜버 이름 -->
                     <h5 class="mb-0"><%=youtube_list.get(i).getYoutuber() %></h5>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"> <video id="review<%=num %>" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>              
-                    <a href="ReviewDetail.jsp"><p id="title<%=num%>"><%=youtube_list.get(i).getYoutube_title() %>.</p></a>
-                    <%num++; %>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>              
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
                     </div>
                 </div>
-               <!--  <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"> <video id="review2" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/review.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title2">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"> <video id="review3" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/review.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title3">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"> <video id="review4" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/review.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title4">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
-                    </div> -->
+            
                    <%} %> 
                <%}%>
             <%} %>
             
-                </div>
             </div>
         </div>
 
@@ -213,40 +189,23 @@
                 <h1 class="mb-5">결말 포함</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
+             <%for(int i = 0 ; i < youtube_list.size(); i++){ %>
+               <%if(movie_one.getMovie_id().equals(youtube_list.get(i).getMovie_id())){%>
+                  <%if(youtube_list.get(i).getYoutube_type().equals("결말포함")) {%>
                 <div class="testimonial-item text-center">
                     <!-- 유튜버 로고 -->
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="./movie_jpg/따따시.jpg" style="width: 80px; height: 80px;">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<%=youtube_list.get(i).getYoutuberimg_link() %>.jpg" style="width: 80px; height: 80px;">
                     <!-- 유튜버 이름 -->
-                    <h5 class="mb-0">Client Name</h5>
+                    <h5 class="mb-0"><%=youtube_list.get(i).getYoutuber() %></h5>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><video id="include_end1" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./Youtube/movie_mp4/Coze76IIflo_기생충.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title5">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
                     </div>
                 </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><video id="include_end2" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/review.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title6">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><video id="include_end3" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/review.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title7">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><video id="include_end4" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/review.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title8">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
-                    </div>
-                </div>
+              
+                      <%} %> 
+               <%}%>
+            <%} %>
             </div>
         </div>
 
@@ -257,40 +216,23 @@
                 <h1 class="mb-5">해석</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
+              <%for(int i = 0 ; i < youtube_list.size(); i++){ %>
+               <%if(movie_one.getMovie_id().equals(youtube_list.get(i).getMovie_id())){%>
+                  <%if(youtube_list.get(i).getYoutube_type().equals("해석영상")) {%>
                 <div class="testimonial-item text-center">
                     <!-- 유튜버 로고 -->
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<%=youtube_list.get(i).getYoutuberimg_link() %>.jpg" style="width: 80px; height: 80px;">
                     <!-- 유튜버 이름 -->
-                    <h5 class="mb-0">Client Name</h5>
+                    <h5 class="mb-0"><%=youtube_list.get(i).getYoutuber() %></h5>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><video id="interpretation1" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/DFvFGLomqeg_기생충.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title9">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
                     </div>
                 </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><video id="interpretation2" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/review.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title10">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><video id="interpretation3" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/review.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title11">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0"><video id="interpretation4" poster="https://img.youtube.com/vi/Coze76IIflo/0.jpg" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="./file/review.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p>
-                    <a href=""><p id="title12">와..미친.. 이걸 이렇게 번역했었다고..!? 작품의 역사를 뒤바꿨던 역대급 G렸던 발번역 & 초월번역들ㄷㄷ..</p></a>
-                    </div>
-                </div>
+               
+                     <%} %> 
+               <%}%>
+            <%} %>
             </div>
         </div>
         
