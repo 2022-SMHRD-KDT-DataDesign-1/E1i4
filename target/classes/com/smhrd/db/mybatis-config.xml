@@ -12,7 +12,6 @@
 		<typeAlias type="com.smhrd.model.YoutubeVO" alias="YoutubeVO"/>
 		<typeAlias type="com.smhrd.model.teamVO" alias="teamVO"/>
 		<typeAlias type="com.smhrd.model.testimonialVO" alias="testimonialVO"/>
-		<typeAlias type="com.smhrd.model.MovieVO" alias="MovieVO"/>
 	</typeAliases>
 	
 
@@ -33,6 +32,5 @@
     <mapper resource="com/smhrd/db/YoutubeMapper.xml"/>
     <mapper resource="com/smhrd/db/teamMapper.xml"/>
     <mapper resource="com/smhrd/db/testimonialMapper.xml"/>
-    <mapper resource="com/smhrd/db/MovieMapper.xml"/>
   </mappers>
 </configuration>
