@@ -33,7 +33,8 @@ public class Frontcontroller extends HttpServlet {
 		Command service = null;
 		
 		
-		
+
+
 		if (result.equals("LoginService.do")) {
 			// 로그인 기능
 			service = new LoginService();
@@ -59,6 +60,7 @@ public class Frontcontroller extends HttpServlet {
 			// search
 			service = new SearchService();
 		}
+
 		String moveURL= service.execute(request, response);
 		response.sendRedirect(moveURL);
 		

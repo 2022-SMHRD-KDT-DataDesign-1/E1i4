@@ -129,125 +129,34 @@ const like =() => {
 
 document.getElementById('cb5').addEventListener('click',like)
 
-/* 별점 */
-
-	let star1 = document.getElementById('one')
-	let star2 = document.getElementById('two')
-	let star3 = document.getElementById('three')
-	let star4 = document.getElementById('four')
-	let star5 = document.getElementById('five')
-		
-		
-	let scoreNum = document.getElementsByClassName('tgNum')[1]
-		
-
-const score1 = () => {
-	
-	if(Number(scoreNum.innerText) == 0){		
-		scoreNum.innerText = Number(scoreNum.innerText)+2	
-		console.log(scoreNum.innerText)		
-	} else if(Number(scoreNum.innerText) == 4){
-		scoreNum.innerText = Number(scoreNum.innerText)-2
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 6){
-		scoreNum.innerText = Number(scoreNum.innerText)-4
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 8){
-		scoreNum.innerText = Number(scoreNum.innerText)-6	
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 10){
-		scoreNum.innerText = Number(scoreNum.innerText)-8
-		console.log(scoreNum.innerText)
-	}
-	
-}
-
-const score2 = () => {
-	
-	if(Number(scoreNum.innerText) == 0){
-		scoreNum.innerText = Number(scoreNum.innerText)+4
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 2){
-		scoreNum.innerText = Number(scoreNum.innerText)+2
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 6){
-		scoreNum.innerText = Number(scoreNum.innerText)-2
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 8){
-		scoreNum.innerText = Number(scoreNum.innerText)-4
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 10){
-		scoreNum.innerText = Number(scoreNum.innerText)-6
-		console.log(scoreNum.innerText)
-	}
-	
-}
-
-const score3 = () => {
-	
-	if(Number(scoreNum.innerText) == 0){
-		scoreNum.innerText = Number(scoreNum.innerText)+6
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 2){
-		scoreNum.innerText = Number(scoreNum.innerText)+4
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 4){
-		scoreNum.innerText = Number(scoreNum.innerText)+2
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 8){
-		scoreNum.innerText = Number(scoreNum.innerText)-2
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 10){
-		scoreNum.innerText = Number(scoreNum.innerText)-4
-		console.log(scoreNum.innerText)
-	}
-	
-}
-
-const score4 = () => {
-	
-	if(Number(scoreNum.innerText) == 0){
-		scoreNum.innerText = Number(scoreNum.innerText)+8
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 2){
-		scoreNum.innerText = Number(scoreNum.innerText)+6
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 4){
-		scoreNum.innerText = Number(scoreNum.innerText)+4
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 6){
-		scoreNum.innerText = Number(scoreNum.innerText)+2
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 10){
-		scoreNum.innerText = Number(scoreNum.innerText)-2
-		console.log(scoreNum.innerText)
-	}
-	
-}
-
-const score5 = () => {
-	
-	if(Number(scoreNum.innerText) == 0){
-		scoreNum.innerText = Number(scoreNum.innerText)+10
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 2){
-		scoreNum.innerText = Number(scoreNum.innerText)+8
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 4){
-		scoreNum.innerText = Number(scoreNum.innerText)+6
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 6){
-		scoreNum.innerText = Number(scoreNum.innerText)+4
-		console.log(scoreNum.innerText)
-	} else if(Number(scoreNum.innerText) == 8){
-		scoreNum.innerText = Number(scoreNum.innerText)+2
-		console.log(scoreNum.innerText)
-	}
-	
-}
-
-star1.onclick = score1
-star2.onclick = score2
-star3.onclick = score3
-star4.onclick = score4
-star5.onclick = score5
+/* 댓글 */
+$(document).ready(function(){ 
+ 
+    $(".primaryContained").on('click', function(){
+    $(".comment").addClass("commentClicked");
+  });//end click
+  $(".input").on('keyup.enter', function(){
+    $(".comment").addClass("commentClicked");
+  });//end keyup
+  });//End Function
+ 
+new Vue({
+    el: "#app",
+    data:{
+       title: 'Add a comment',
+      newItem: '',
+      item: [],
+    },
+    methods:{
+      addItem  (){
+      this.item.push(this.newItem);
+        this.newItem = "";
+      }
+  }
+ 
+  });
+  
+  /*댓글 스크롤바*/
+$('.comment')
+        .stop()
+        .animate({ scrollTop: $('.comment')[0].scrollHeight }, 1000);
