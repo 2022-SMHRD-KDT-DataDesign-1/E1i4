@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +40,7 @@
 	<!-- Navbar Start -->
 	<nav
 		class="navbar navbar-expand-lg bg-black navbar-light sticky-top p-0">
-		<a href="index.html"
+		<a href="index-goun.jsp"
 			class="navbar-brand d-flex align-items-center px-4 px-lg-5">
 			<h2 class="m-0 text-primary">REVVIA</h2>
 		</a>
@@ -50,9 +51,9 @@
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<div class="navbar-nav ms-auto p-4 p-lg-0">
 				<!-- search-btn -->
-				<form class="search-form">
+				<form action="SearchService.do" method="get" class="search-form">
 					<input type="search" value="" placeholder="검색어를 입력하세요..."
-						class="search-input">
+						class="search-input" name="searchKeyword">
 					<button type="submit" class="search-button">
 						<svg class="submit-button">
                             <use
@@ -73,7 +74,7 @@
 				<div class="modal hidden">
 					<div class="modal__overlay"></div>
 					<div class="modal__content">
-						<button id="closeBtn">❌</button>
+						<!-- <button id="closeBtn">❌</button> -->
 						<h2 class="modal__title">독고운✨님이 찜한 영화에 기반한 추천 결과입니다!</h2>
 						<div class="ai-slick-wrapper">
 							<div class="ai-slick-item">
@@ -164,6 +165,6 @@
 		src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 	<!-- Template Javascript -->
-	<script src="js/main.js"></script>
+	<script src="js/main-dokgo.js"></script>
 </body>
 </html>

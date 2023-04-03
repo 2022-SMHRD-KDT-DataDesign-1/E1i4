@@ -343,7 +343,7 @@ body{
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text {
-    background: #000000 !important;
+    background: #1e1e1e !important;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text * {
@@ -363,7 +363,7 @@ body{
     margin: 0 5px;
     width: 15px;
     height: 15px;
-    border: 1px solid #CCCCCC;
+    border: 1px solid #52565b;
     transition: .5s;
 }
 
@@ -375,9 +375,9 @@ body{
 
 
 /* 예고편 */
-.trailer{position: static; width: 100vw; height: 100%; top: 0; left: 0; bottom: 0; opacity: 0.8; quality: highres; }
+.trailer{position: static; width: 100vw; height: 100%; top: 0; left: 0; bottom: 0; opacity: 0.8; quality: highres; transform: translateY(80px);}
 /* 영화정보 */
-.movie_import { position: absolute; top: 50%; width: 100%; top: 15px; margin-top: 150px}
+.movie_import { position: absolute; top: 50%; width: 100%; top: 15px; margin-top: 230px; font-weight: bold;}
 .movie_import p{margin-top: 55px; margin-left: 60px; text-align: left; color: #ffffff;}
 #movie_date{font-size: 15px; margin: 30px 0px 52px 55px;}
 #movie_age{font-size: 15px; margin:-40px 0px 0px 53px;}
@@ -556,7 +556,7 @@ input[name="star"]:checked + label {animation: scaleup 1s;}
   display: inline-block;
   width: 215px;
   padding: 0px 0 8px -243px;
-  margin: 0px 0px 0px -300px;
+  margin: 2px 0px 0px -300px;
   font-family: "Open Sans", sans;
   font-weight: 400;
   color:  #C657E1;
@@ -578,7 +578,7 @@ input[name="star"]:checked + label {animation: scaleup 1s;}
   top: 0;
   left: 0;
   padding: 1px 20px;
-  margin: 1px 0px 0px -301px;
+  margin: 2px 0px 0px -301px;
   text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
   background: #d62a9d;
   transition: all 0.3s ease-in-out;
@@ -619,47 +619,47 @@ th:nth-of-type(4) {color:gray;}
 
   /* 리뷰영상 */
   .container1{margin: 400px 0px 0px 0px;}
-  #review1{ width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #review1[poster]{width:400px ; height:300px;}
-  #title1{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}   
-  #review2{ width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #review1{ width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px; margin: 0px 0px 0px -17px;}
+  #review1[poster]{width:400px ; height:300px; }
+  #title1{ color: white; margin:15px 0px 0px -7px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}   
+  #review2{ width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px; }
   #review2[poster]{width:400px ; height:300px;}
-  #title2{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #review3{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #title2{ color: white; margin:15px 0px 0px -7px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #review3{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px;}
   #review3[poster]{width:400px ; height:300px;}
-  #title3{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #review4{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #title3{ color: white; margin:15px 0px 0px -7px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #review4{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px;}
   #review4[poster]{width:400px ; height:300px;}
-  #title4{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  
+  #title4{ color: white; margin:15px 0px 0px -7px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+ 
   /* 결말 포함 */
   .container2{margin: 100px 0px 0px 0px;}
-  #include_end1{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #include_end1{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px;}
   #include_end1[poster]{width:400px ; height:300px;}
-  #title5{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #include_end2{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #title5{ color: white; margin:15px 0px 0px -7px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #include_end2{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px;}
   #include_end2[poster]{width:400px ; height:300px;}
-  #title6{ color: white;margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #include_end3{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #title6{ color: white;margin:15px 0px 0px -7px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #include_end3{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px;}
   #include_end3[poster]{width:400px ; height:300px;}
-  #title7{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #include_end4{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #title7{ color: white; margin:15px 0px 0px -7px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #include_end4{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px;}
   #include_end4[poster]{width:400px ; height:300px;}
-  #title8{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #title8{ color: white; margin:15px 0px 0px -7px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
   
   
   /* 해석영상 */
   .container3{margin: 100px 0px -450px 0px;}
-  #interpretation1{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #interpretation1{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px; }
   #interpretation1[poster]{width:400px ; height:300px;}
-  #title9{ color: white;margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #interpretation2{   width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #title9{ color: white;margin:15px 0px 0px -7px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #interpretation2{   width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px;}
   #interpretation2[poster]{width:400px ; height:300px;}
-  #title10{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #interpretation3{   width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #title10{ color: white; margin:15px 0px 0px -7px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #interpretation3{   width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px;}
   #interpretation3[poster]{width:400px ; height:300px;}
-  #title11{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #interpretation4{   width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #title11{ color: white; margin:15px 0px 0px -7px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #interpretation4{   width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;  margin: 0px 0px 0px -17px;}
   #interpretation4[poster]{width:400px ; height:300px;}
-  #title12{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
+  #title12{ color: white; margin:15px 0px 0px -7px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
   
