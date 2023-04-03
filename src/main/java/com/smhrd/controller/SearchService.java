@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.smhrd.command.Command;
-import com.smhrd.model.MovieDAO;
-import com.smhrd.model.MovieVO;
 import com.smhrd.model.testimonialDAO;
 import com.smhrd.model.testimonialVO;
 
