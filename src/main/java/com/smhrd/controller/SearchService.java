@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.smhrd.command.Command;
-import com.smhrd.model.MovieDAO;
-import com.smhrd.model.MovieVO;
+import com.smhrd.model.testimonialDAO;
+import com.smhrd.model.testimonialVO;
 
 public class SearchService implements Command {
 	
@@ -19,8 +19,8 @@ public class SearchService implements Command {
 		
 		System.out.println(searchKeyword);
 		
-		MovieDAO dao = new MovieDAO();
-		List<MovieVO> list = dao.searchMovie(searchKeyword);
+		testimonialDAO dao = new testimonialDAO();
+		List<testimonialVO> list = dao.searchMovie(searchKeyword);
 		
 		if(list != null) {
 			System.out.println("search success");

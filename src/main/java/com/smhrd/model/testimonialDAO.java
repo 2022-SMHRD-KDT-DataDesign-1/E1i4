@@ -21,4 +21,21 @@ public class testimonialDAO {
 			
 			return movie_one;
 		}
+		
+		public testimonialVO deatilMovie(String movie_id) {
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			testimonialVO vo = sqlSession.selectOne("detailMovie", movie_id);
+			sqlSession.close();
+			
+			return vo;
+		}
+		
+		// search
+		public List<testimonialVO> searchMovie(String searchKeyword) {
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			List<testimonialVO> list = sqlSession.selectList("searchMovie", searchKeyword);
+			sqlSession.close();
+			
+			return list;
+		}
 }
