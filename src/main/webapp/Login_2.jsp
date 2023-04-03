@@ -10,7 +10,7 @@
 <title>사용자 로그인</title>
 </head>
 <body >
-<a href="Login_1.jsp" class="logo">RIVVIA</a>
+<a href="Login_1.jsp" class="logo">REVVIA</a>
 	<div class="container">
 		<div class="login">
 			<p class="logo_login">반갑습니다.<br> 계정 선택해주세요.      </p>
@@ -18,7 +18,7 @@
 			
 				<div class ="btn_wrap">
 					<div class = btn_wrap_line style="display: grid" >
-					<button calss ="btn-long-tv" id ="rvLogin">RIVVIA ID로 시작하기</button>
+					<button calss ="btn-long-tv" id ="rvLogin">REVVIA ID로 시작하기</button>
 					<button calss ="btn-long-tv" id ="nvLogin">네이버 ID로 시작하기</button>
 					<button calss ="btn-long-tv" id ="kaLogin">카카오 ID로 시작하기</button>
 					<button calss ="btn-long-tv" id ="faLogin">페이스북 ID로 시작하기</button>

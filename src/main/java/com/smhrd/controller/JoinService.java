@@ -30,6 +30,9 @@ public class JoinService implements Command {
 	          moveURL = "JoinSuccess.jsp?member_id="+member_id;
 	       } else {
 	          System.out.println("회원가입 실패");
+	        
+	         
+	       
 	          moveURL ="join.jsp";
 	       }
 	      

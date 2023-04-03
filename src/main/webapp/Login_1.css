@@ -8,7 +8,7 @@ body {
   font-family: "Montserrat", sans-serif; 
   background-image:  linear-gradient(rgba(0, 0, 0, 0.527), 
   rgba(0, 0, 0, 10)),
-  url("img/poster.jpg");
+  url("./img/poster.jpg");
   background-color: #000;/* 까만색(0,0,0) */    
   min-height: 100vh;   
 }
@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   
 }
@@ -47,7 +47,7 @@ input[type="password"]:focus {
 }
 
 #username {
-  background-image: url(img/user.png);
+ 
   background-repeat: no-repeat;
   background-position: 13px;
   text-indent: 17px;
@@ -57,7 +57,6 @@ input[type="password"]:focus {
 }
 
 #password {
-  background-image: url(img/password.png);
   background-repeat: no-repeat;
   background-position: 13px;
   text-indent: 17px;
@@ -109,7 +108,7 @@ input[type="submit"] {
   font-weight: 700;
   font-size: 20px;
   line-height: 0px;
-  margin-left: 150px;
+  margin-left: 215px;
   margin-top: 20px;
   padding: 10px;
   width: 410px;

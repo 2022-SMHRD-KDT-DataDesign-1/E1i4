@@ -12,13 +12,14 @@ body {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.527),
 		rgba(0, 0, 0, 10)), url("img/poster.jpg");
 	background-color: #000; /* 까만색(0,0,0) */
+	 min-height: 100vh;
 }
 
 .container {
 	display: grid;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 95vh;
 	width: 100%;
 	font-size: 20px;
 }
@@ -31,6 +32,7 @@ body {
 	transform: translateY(400px);
 	width: 100%;
 	font-size: 20px;
+	
 }
 
 input {
@@ -172,6 +174,7 @@ input[type="submit"] {
 	margin: 0px 0px 0px 0px;
 	cursor: pointer;
 	text-decoration: none;
+	
 }
 
 /* 확인체크 부분   */
@@ -190,6 +193,7 @@ input[type="submit"] {
 	margin-top: 3rem;
 	color: #6e6e6e;
 	text-align: center;
+	
 	font-size: 1.167rem;
 	font-weight: bold;
 }
@@ -213,3 +217,5 @@ input[type="submit"] {
 	
 	
 }
+
+

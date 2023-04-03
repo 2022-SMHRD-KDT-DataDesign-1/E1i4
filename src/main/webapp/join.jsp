@@ -10,7 +10,7 @@
 <title>사용자 로그인</title>
 </head>
 <body>
-	<a href="Login_1.jsp" class="logo">RIVVIA</a>
+	<a href="Login_1.jsp" class="logo">REVVIA</a>
 	<div class="container">
 		<div class="login">
 			<p class="logo_login">회원가입</p>
@@ -29,7 +29,7 @@
 					(~!@#$%^&*) 조합 8~15 자리 로 입력해주세요.</p>
 				<input id="password" type="password" name="member_pwck"
 					placeholder="비밀번호확인" />
-				<p class="input-info red" id="userIdMsg">입력한 내용이 없어요</p>	 
+				<p class="input-info red" id="userIdMsg"></p>	 
 				<input id="nickname" type="text"
 					name="nickname" placeholder="닉네임" autofocus="autofocus"
 					autocomplete="off" /> 
