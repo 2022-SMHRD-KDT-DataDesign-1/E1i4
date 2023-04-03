@@ -55,6 +55,7 @@ public class Frontcontroller extends HttpServlet {
 	      }else if (result.equals("DetailService.do")) {
 	    	  //상세페이지 - 영화정보 서비스
 	    	  service = new DetailService();
+	    	  
 	      }
 		String moveURL= service.execute(request, response);
 		response.sendRedirect(moveURL);

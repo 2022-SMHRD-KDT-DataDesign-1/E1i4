@@ -11,8 +11,8 @@
   	</insert>
   	
 	<!-- 상세페이지 - 영화 정보 -->
-	<select id="SelectMovie" resultType="testimonialVO" parameterType="testimonialVO">
-		select * from movies where movie_id=#{movie_id}
+	<select id="SelectMovie" parameterType="testimonialVO" resultType="testimonialVO">
+		select * from movies where (movie_id='1')
 	</select>
 	
 </mapper>
