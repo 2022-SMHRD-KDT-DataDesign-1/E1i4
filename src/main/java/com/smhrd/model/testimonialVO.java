@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.math.BigDecimal;
+
 public class testimonialVO {
 
 	private String member_id;
@@ -14,7 +16,7 @@ public class testimonialVO {
 	private String director;
 	private String actors;
 	private String poster_link;
-	private String movie_rate;
+	private BigDecimal movie_rate;
 	private String movie_time;
 	private String synopsis;
 	private String trailer;
@@ -28,10 +30,14 @@ public class testimonialVO {
 	private String img_link;
 	private String youtubemp4_link;
 	private String youtuberimg_link;
+	
+	private String searchKeyword;
 		
+
+
 	public testimonialVO(String member_id, String nickname, String r_num, String member_comment, String like_check,
 			String member_rate, String movie_id, String movie_title, String movie_date, String director, String actors,
-			String poster_link, String movie_rate, String movie_time, String synopsis, String trailer, String movie_age,
+			String poster_link, BigDecimal movie_rate, String movie_time, String synopsis, String trailer, String movie_age,
 			String movie_genre, String youtube_id, String youtube_type, String youtuber, String youtube_title,
 			String youtube_link, String img_link, String youtubemp4_link, String youtuberimg_link) {
 		super();
@@ -64,13 +70,15 @@ public class testimonialVO {
 	}
 
 	// 상세페이지 - 영화 정보
-	public testimonialVO(String movie_id, String movie_title, String movie_date, String actors, String movie_rate,
+	public testimonialVO(String movie_id, String movie_title, String movie_date, String director, String actors, String poster_link, BigDecimal movie_rate,
 			String movie_time, String synopsis, String trailer, String movie_age, String movie_genre) {
 		super();
 		this.movie_id = movie_id;
 		this.movie_title = movie_title;
 		this.movie_date = movie_date;
+		this.actors = director;
 		this.actors = actors;
+		this.poster_link = poster_link;
 		this.movie_rate = movie_rate;
 		this.movie_time = movie_time;
 		this.synopsis = synopsis;
@@ -79,11 +87,29 @@ public class testimonialVO {
 		this.movie_genre = movie_genre;
 	}
 
+	// 상세페이지 - 유튜브 정보
+	
+	public testimonialVO(String youtube_id,String movie_id, String youtube_type, String youtuber, String youtube_title,
+			String youtube_link, String img_link, String youtubemp4_link, String youtuberimg_link) {
+		super();
+		this.youtube_id = youtube_id;
+		this.movie_id = movie_id;
+		this.youtube_type = youtube_type;
+		this.youtuber = youtuber;
+		this.youtube_title = youtube_title;
+		this.youtube_link = youtube_link;
+		this.img_link = img_link;
+		this.youtubemp4_link = youtubemp4_link;
+		this.youtuberimg_link = youtuberimg_link;
+	}
+
+	
 	
 	//getter
 	public String getMember_id() {
 		return member_id;
 	}
+
 
 	public String getNickname() {
 		return nickname;
@@ -129,7 +155,7 @@ public class testimonialVO {
 		return poster_link;
 	}
 
-	public String getMovie_rate() {
+	public BigDecimal getMovie_rate() {
 		return movie_rate;
 	}
 
@@ -185,7 +211,14 @@ public class testimonialVO {
 		return youtuberimg_link;
 	}
 	
+	
+	public String getSearchKeyword() {
+		return searchKeyword;
+	}
 
+	public void setSearchKeyword(String searchKeyword) {
+		this.searchKeyword = searchKeyword;
+	}
 	
 		
 	

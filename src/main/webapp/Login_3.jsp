@@ -12,10 +12,10 @@
 </head>
 <body>
 	
-	<a href="Login_1.jsp" class="logo">RIVVIA</a>
+	<a href="Login_1.jsp" class="logo">REVVIA</a>
 	<div class="container">
 		<div class="login">
-			<p class="logo_login">RIVVIA 로그인</p>
+			<p class="logo_login">REVVIA 로그인</p>
 			<form class="login-form" action="LoginService.do" method="POST">
 				<input id="username" type="text" name="member_id"
 					placeholder="아이디 입력 (6~20자)" autofocus="autofocus"

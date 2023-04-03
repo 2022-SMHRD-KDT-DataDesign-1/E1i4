@@ -21,4 +21,35 @@ public class testimonialDAO {
 			
 			return movie_one;
 		}
+		
+		// searchMovie
+		public testimonialVO deatilMovie(String movie_id) {
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			testimonialVO vo = sqlSession.selectOne("detailMovie", movie_id);
+			sqlSession.close();
+			
+			return vo;
+		}
+		
+		
+		public List<testimonialVO> searchMovie(String searchKeyword) {
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			List<testimonialVO> list = sqlSession.selectList("searchMovie", searchKeyword);
+			sqlSession.close();
+			
+			return list;
+		} 
+		
+		// searchYoutube
+		public List<testimonialVO> detailYoutube(String movie_id) {
+			
+			List<testimonialVO> youtube_list = null;
+			
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			youtube_list = sqlSession.selectList("com.smhrd.db.testimonialMapper.detailYoutube",movie_id);
+			sqlSession.close();
+			
+			return youtube_list;
+		}
+		
 }

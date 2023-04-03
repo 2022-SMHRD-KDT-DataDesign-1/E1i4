@@ -10,7 +10,7 @@
 <title>사용자 로그인</title>
 </head>
 <body>
-	<a href="Login_1.jsp" class="logo">RIVVIA</a>
+	<a href="Login_1.jsp" class="logo">REVVIA</a>
 	<div class="container">
 		<div class="login">
 			<p class="logo_login">회원가입</p>

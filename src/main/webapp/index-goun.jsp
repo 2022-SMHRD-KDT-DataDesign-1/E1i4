@@ -155,9 +155,9 @@
 			<div class="slick-service-item row g-4 col-lg-3 col-sm-6"
 				style="width: 1350px">
 				<div class="service-item text-center pt-3">
-					<img
-						src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg?type=m886_590_2"
-						alt="">
+					<a href="testimonial.jsp?movie_id=1">
+						<img src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg?type=m886_590_2" alt="">
+					</a>
 				</div>
 				<div class="service-item text-center pt-3">
 					<img

@@ -10,6 +10,7 @@ import com.smhrd.model.MemberVO;
 
 public class LoginService implements Command{
 
+
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		String moveURL = "";
@@ -36,3 +37,4 @@ public class LoginService implements Command{
 	}
 	
 }
+

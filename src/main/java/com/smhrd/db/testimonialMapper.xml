@@ -15,4 +15,19 @@
 		select * from movies where (movie_id='1')
 	</select>
 	
+	<!-- searchMovie -->
+	<select id="detailMovie" parameterType="String" resultType="testimonialVO">
+		select * from movies where movie_id = #{movie_id} 
+	</select>
+	
+	<select id="searchMovie" resultType="testimonialVO" parameterType="String">
+		select * from movies where movie_title like '%'||#{searchKeyword}||'%' 
+	</select>
+	
+	<!-- searchMovie -->
+	<select id="detailYoutube" resultType="testimonialVO">
+		select * from youtubes where movie_id = #{movie_id}
+	</select>
+		
+	
 </mapper>

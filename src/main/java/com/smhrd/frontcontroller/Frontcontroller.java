@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.command.Command;
 import com.smhrd.controller.BoardService;
 import com.smhrd.controller.DeleteService;
-import com.smhrd.controller.DetailService;
 import com.smhrd.controller.JoinService;
 import com.smhrd.controller.LoginService;
 import com.smhrd.controller.LogoutService;
@@ -53,9 +52,6 @@ public class Frontcontroller extends HttpServlet {
 		} else if (result.equals("BoardService.do")) {
 			// Board 서비스
 			service = new BoardService();
-		} else if (result.equals("DetailService.do")) {
-			// 상세페이지 - 영화정보 서비스
-			service = new DetailService();
 		} else if (result.equals("SearchService.do")) {
 			// search
 			service = new SearchService();

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <link rel="stylesheet" href="Login_1.css" />
-<title>RIVVIA</title>
+<title>REVVIA</title>
 </head>
 <body>
-	<a href="Login_1.jsp" class="logo">RIVVIA</a>
+	<a href="Login_1.jsp" class="logo">REVVIA</a>
 	<form class="login_form" action="Login_2.jsp" method="POST">
 		<div class="container">
 			<div class="login">
