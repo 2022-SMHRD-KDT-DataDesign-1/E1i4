@@ -566,50 +566,16 @@ button.primaryContained:hover {
 }
 
     /* 리뷰영상 */
+  #title{ color: white; margin:15px 0px 0px -18px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}   
+
   .container1{margin: -500px 0px 0px 0px;}
-  #review1{ width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #review1[poster]{width:400px ; height:300px;}
-  #title1{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}   
-  #review2{ width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #review2[poster]{width:400px ; height:300px;}
-  #title2{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #review3{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #review3[poster]{width:400px ; height:300px;}
-  #title3{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #review4{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #review4[poster]{width:400px ; height:300px;}
-  #title4{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  
+  #review{ width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
+  #review[poster]{width:400px ; height:300px; margin: 0px 0px 0px -20px;}
+ 
   /* 결말 포함 */
   .container2{margin: 100px 0px 0px 0px;}
-  #include_end1{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #include_end1[poster]{width:400px ; height:300px;}
-  #title5{ color: white; margin:15px 0px 0px 3px; width: 400px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #include_end2{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #include_end2[poster]{width:400px ; height:300px;}
-  #title6{ color: white;margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #include_end3{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #include_end3[poster]{width:400px ; height:300px;}
-  #title7{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #include_end4{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #include_end4[poster]{width:400px ; height:300px;}
-  #title8{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  
-  
+
   /* 해석영상 */
   .container3{margin: 100px 0px 0px 0px;}
-  #interpretation1{  width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #interpretation1[poster]{width:400px ; height:300px;}
-  #title9{ color: white;margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #interpretation2{   width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #interpretation2[poster]{width:400px ; height:300px;}
-  #title10{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #interpretation3{   width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #interpretation3[poster]{width:400px ; height:300px;}
-  #title11{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
-  #interpretation4{   width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #interpretation4[poster]{width:400px ; height:300px;}
-  #title12{ color: white; margin:15px 0px 0px 3px; width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}
- 
- 
+
  .container{transform:translateY(100px)}
