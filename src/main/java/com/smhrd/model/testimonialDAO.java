@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -12,11 +14,9 @@ public class testimonialDAO {
 	
 	// 상세페이지 - 영화 정보
 		public testimonialVO SelectMovie(testimonialVO vo){
-			
-			testimonialVO movie_one = null;
-			
+
 			SqlSession sqlSession = sqlSessionFactory.openSession(true);
-			movie_one = sqlSession.selectOne("com.smhrd.db.testimonialMapper.SelectMovie", vo);
+			testimonialVO movie_one = sqlSession.selectOne("com.smhrd.db.testimonialMapper.SelectMovie",vo);
 			sqlSession.close();
 			
 			return movie_one;
@@ -32,5 +32,21 @@ public class testimonialDAO {
 			sqlSession.close();
 			
 			return cnt;
+		}
+			public testimonialVO deatilMovie(String movie_id) {
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			testimonialVO vo = sqlSession.selectOne("detailMovie", movie_id);
+			sqlSession.close();
+			
+			return vo;
+		}
+		
+		// search
+		public List<testimonialVO> searchMovie(String searchKeyword) {
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			List<testimonialVO> list = sqlSession.selectList("searchMovie", searchKeyword);
+			sqlSession.close();
+			
+			return list;
 		}
 }

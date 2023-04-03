@@ -129,3 +129,34 @@ const like =() => {
 
 document.getElementById('cb5').addEventListener('click',like)
 
+/* 댓글 */
+$(document).ready(function(){ 
+ 
+    $(".primaryContained").on('click', function(){
+    $(".comment").addClass("commentClicked");
+  });//end click
+  $(".input").on('keyup.enter', function(){
+    $(".comment").addClass("commentClicked");
+  });//end keyup
+  });//End Function
+ 
+new Vue({
+    el: "#app",
+    data:{
+       title: 'Add a comment',
+      newItem: '',
+      item: [],
+    },
+    methods:{
+      addItem  (){
+      this.item.push(this.newItem);
+        this.newItem = "";
+      }
+  }
+ 
+  });
+  
+  /*댓글 스크롤바*/
+$('.comment')
+        .stop()
+        .animate({ scrollTop: $('.comment')[0].scrollHeight }, 1000);

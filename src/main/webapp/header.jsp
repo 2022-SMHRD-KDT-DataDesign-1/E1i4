@@ -131,8 +131,9 @@
 						style="font-size: 18px; padding-right: 30px; margin-right: 10px">독고운<!--<i class="fa fa-arrow-right ms-3"></i>--></a>
 					<div class="dropdown-menu fade-down m-0" id="dropdown-mypage"
 						style="text-align: center; min-width: 80px; right: 10px; padding: 3px; position: absolute;">
-						<a href="" class="dropdown-item">보관함</a> <a href=""
-							class="dropdown-item">설정</a> <a href="" class="dropdown-item">로그아웃</a>
+						<a href="team.jsp" class="dropdown-item">보관함</a> 
+						<a href=""class="dropdown-item">설정</a> 
+						<a href="Login_1.jsp" class="dropdown-item">로그아웃</a>
 					</div>
 				</div>
 				<!-- <div class="nav-item dropdown " style="margin-left: 50px">

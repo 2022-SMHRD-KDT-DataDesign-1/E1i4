@@ -1,6 +1,7 @@
+<%@page import="com.smhrd.model.testimonialDAO"%>
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.testimonialVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
-<%@page import="com.smhrd.model.MovieVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -30,27 +31,66 @@
     
 <body>
  <!-- Navbar Start -->
-	<%@ include file="header.jsp" %>
-	<!-- Navbar End -->
+    <nav class="navbar navbar-expand-lg bg-black navbar-light shadow sticky-top p-0">
+        <a href="index-goun.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary">REVVIA</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <!-- <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a> -->
+                <div class="search-area">
+                    <input type="text" class="serach-input" name="" placeholder="search">
+                    <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+                
+                <div class="nav-item dropdown" style="margin-left: 50px">
+                    <a href="" class="btn btn-primary py-4 d-none d-lg-block nav-link-dropdown-toggle" data-bs-toggle="dropdown" style="margin-right: 30px">000<!--<i class="fa fa-arrow-right ms-3"></i>--></a>
+                    <div class="dropdown-menu fade-down m-0" style="text-align: center; min-width: 80px; right: 11px; padding: 3px; position:absolute;">
+                        <a href="team.jsp" class="dropdown-item">보관함</a>
+                        <a href="" class="dropdown-item">설정</a>
+                        <a href="" class="dropdown-item">로그아웃</a>
+                    </div>
+                </div>
+                <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+            </div>
+            <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a> -->
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
 
     <!-- Header Start -->
 
     <div>
          <%
-         	testimonialVO movie_one = (testimonialVO)session.getAttribute("movie_one");
-         
+    		
+        	/* testimonialVO movie_one = (testimonialVO)session.getAttribute("movie_one"); */
+         	/* search */
+        	String movie_id = request.getParameter("movie_id");
+        	testimonialDAO dao = new testimonialDAO();
+        	testimonialVO movie_one = dao.deatilMovie(movie_id);
+        	
          	if(movie_one != null){
-         		System.out.print(movie_one.getMovie_title());
+         		 System.out.print(movie_one.getMovie_title());
          	}
+         	
+
+        
          %>
         <!-- 예고편 -->
-        <div class="trailer" muted="false" data-vbg-autoplay="true" data-vbg="https://youtu.be/jBdRhhSt3Bc <%-- <%= movie_one.getTrailer()%> --%>"></div>
+        <div class="trailer" muted="false" data-vbg-autoplay="true" data-vbg="https://youtu.be/jBdRhhSt3Bc<%--  <%= movie_one.getTrailer()%>  --%>"></div>
         <!-- 영화정보  -->
         <div class="movie_import">
-         <p id="movie_date">2019 <%-- <%= movie_one.getMovie_date()%> --%></p>
+         <p id="movie_date">2019 <%= movie_one.getMovie_date()%></p>
          <p id="movie_age">관람 등급 : 12<%--  <%= movie_one.getMovie_age() %> --%></p>
-         <p id="movie_genre"> 드라마 </p>             
+         <p id="movie_genre">드라마</p>            
          <P id="movie_title">기생충<%-- <%= movie_one.getMovie_title() %> --%></P>
              <!-- 총 평점 -->
              <p class="all-score">⭐ 9.9<%-- <%= movie_one.getMovie_rate() %> --%></p>
@@ -79,110 +119,31 @@
 젊고 아름다운 사모님 연교(조여정)가 기우를 맞이한다.
 그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고 있었으니…" <%-- <%= movie_one.getSynopsis() %> --%></P>
           <br>   
-             <!-- 사용자 별점 -->
-             <p id="user_com">사용자평</p>
-           <div class="star-source">
-             <svg>
-                    <linearGradient x1="50%" y1="5.41294643%" x2="87.5527344%" y2="65.4921875%" id="grad">
-                       <stop stop-color="#bf209f" offset="0%"></stop>
-                       <stop stop-color="#d62a9d" offset="60%"></stop>
-                       <stop stop-color="#ED009E" offset="100%"></stop>
-                   </linearGradient>
-               <symbol id="star" viewBox="153 89 106 108">   
-                 <polygon id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor" points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085"></polygon>
-               </symbol>
-           </svg>
-           
-           </div>
-              
-           <div id="star-container">
-             <input type="radio" name="star" id="five">
-             <label for="five">
-               <svg class="star">
-                   <use xlink:href="#star"/>
-               </svg>
-             </label>
-             <input type="radio" name="star" id="four">
-             <label for="four">
-               <svg class="star">
-                   <use xlink:href="#star"/>
-                </svg>
-             </label>
-               <input type="radio" name="star" id="three">
-               <label for="three">
-                 <svg class="star">
-                   <use xlink:href="#star"/>
-                 </svg>
-               </label>
-             <input type="radio" name="star" id="two">
-             <label for="two">
-               <svg class="star">
-                 <use xlink:href="#star" />
-               </svg>
-             </label>
-             <input type="radio" name="star" id="one">
-             <label for="one">
-               <svg class="star">
-                  <use xlink:href="#star" />
-                </svg>
-             </label>
-           </div>
-           <!-- 댓글 입력 -->
-           <form class="comment" action="testimonial.jsp" method="get">
-                 <span class="commentS">
-    				<input class="card-slide" id="knock" type="text" placeholder="댓글을 입력하세요" /><label for="knock">click!</label>
-		            <input type="submit" value="등록" id="submit"></input>
-  				 </span>
-            </form>
           
-         <!-- 댓글창 -->
-         <div>
-           <table id="board">
-              <tr>
-                 <th>Nickname</td>
-                 <th>Content</td>
-                 <th>Date</td>
-                 <th>Delete</td>                 
-              </tr>
-               <tr>
-                 <td class="id">test1</td>
-                 <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
-                 <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">🗑️</a></td>
-              </tr>
-               <tr>
-                 <td class="id">test1</td>
-                 <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
-                 <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">🗑️</a></td>
-              </tr>
-               <tr>
-                 <td class="id">test1</td>
-                 <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
-                 <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">🗑️</a></td>
-              </tr>
-               <tr>
-                 <td class="id">test1</td>
-                 <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
-                 <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">🗑️</a></td>
-              </tr>
-               <tr>
-                 <td class="id">test1</td>
-                 <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
-                 <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">🗑️</a></td>
-              </tr>
-              <tr>
-                 <td class="id">test1</td>
-                 <td class="content">원래 있던 자리로 돌아간 수석처럼 기택네 가족도 원래 있던 반지하에서 계속 살아가는 것이 순리였던 것일까. 분수에 맞지 않은 옷을 잠깐 입었던 것처럼</td>
-                 <td class="date">2023.03.26</td>
-                 <td class="delete"><a href="">🗑️</a></td>
-              </tr>
-           </table>            
-         </div>  
-       </div>   
+          </div>
+             <!-- 댓글창 -->
+           <form class="chat_form" action="">
+			<section id="app">
+			    <div class="containerMember">
+			      <div class="rows">
+			        <div class="col-6">
+			          <div class="comment">
+			       		 <p id="items" v-for="items in item" v-text="items"></p>	
+			          </div><!--End Comment-->
+			          </div><!--End col -->
+			          </div><!-- End row -->
+			     
+			      <div class="rows">
+			        <div class="col-6">
+			      	  <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+			          <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+			        </div><!-- End col -->
+			      </div><!--End Row -->
+			    </div><!--End Container -->
+			  </section><!-- end App -->
+			</form>
+         <!-- 댓글창 끝 -->
+          
     </div>
  
     <!-- Header End -->
@@ -323,10 +284,91 @@
         </div>
         
 
-  <!-- Footer Start -->
-	<%@ include file="footer.jsp" %>
-	<!-- Footer End -->
-  
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <!-- <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>SmartInjaeGaebalwon</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+821034567890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>godoli@smhrd.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid p-1" src="img/burger_ear.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid p-1" src="img/burger_ear.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid p-1" src="img/burger_ear.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/burger_ear.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/burger_ear.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/burger_ear.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <h6>서비스 소개 | 개인정보 처리 방침 | 이용약관 | 고객센터 | 채용정보</h6><br>
+                        <span style="word-break:break-all">E1I4 주식회사 | 대표이사 독고운</span><br>
+                        <span>고객센터 1588-8282 (평일 09:00~18:00 / 점심시간 12:50~14:10 / 주말 및 공휴일 휴무)</span><br>
+                        <span>사업자등록번호 220-88-38020 | 호스팅서비스제공자 : 스마트인재개발원</span><br>
+                        <span>광주광역시 동구 예술길 31-15 4층 D반 | 전자우편주소 : godoli@smhrd.com</span><br>
+                        &copy; <a class="border-bottom" href="#">REVVIA</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">DGO</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">E1I4</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
       <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -341,6 +383,8 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     
+    <!-- Vue JS -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
 
     <!-- Template Javascript -->
     <script src="js/mainyu.js"></script>
