@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap");
+
+body {
+ position: static;
+  margin: 0px auto;
+  padding: 0;
+  font-family: "Montserrat", sans-serif; 
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.527), 
+  rgba(0, 0, 0, 10)),
+  url("img/poster.jpg");
+  background-color: #000;/* 까만색(0,0,0) */    
+  min-height: 100vh;   
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  
+}
+
+input {
+  display: block;
+}
+
+form input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  width: 319px;
+  height: 40px;
+  text-align: center;
+  margin: 20px auto;
+  background: #efefef;
+  border: 0;
+  border-radius: 11px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: black;
+  box-shadow: 0 0 0 1.2px black;
+}
+
+#username {
+  background-image: url(img/user.png);
+  background-repeat: no-repeat;
+  background-position: 13px;
+  text-indent: 17px;
+  margin: 50px 0px 0px 40px;
+  
+  
+}
+
+#password {
+  background-image: url(img/password.png);
+  background-repeat: no-repeat;
+  background-position: 13px;
+  text-indent: 17px;
+  margin: 20px 0px 0px 40px;
+}
+#join {
+  display: inline;
+  font-size: 15px;
+  margin-left: 140px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+#new-user {
+  display: grid;
+  font-size: 11px;
+  margin-left: 232px;
+  margin-top: -30px;
+  text-decoration: none;
+  color: white;
+}
+#remember-me {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin:0px 0px 0px 40px
+}
+
+#rememberme {
+  display: inline;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  vertical-align: middle;
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+input[type="submit"] {
+  font-family: Montserrat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 0px;
+  margin-left: 150px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 410px;
+  height: 70px;
+  background-color: #c657e1;
+  border-radius: 11px;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.logo {
+  font-style: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: -1px;
+  text-align: left;
+  padding-bottom: 10px;
+  color: #c657e1;
+  margin: 0px 0px 0px 22px;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+h1{
+  font-style: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 0px;
+  text-align: left;
+  padding-bottom: 10px;
+  color: #c657e1;
+  margin: 100px 0px 0px 28px;
+}
+
+
+.login_page1{
+	font-size:3rem;
+	text-align:center;
+	color: white;
+	margin: -150px 0px 0px 0px
+}
+
+.login_page2{
+	font-size:2rem;
+	color: white;
+	text-align:center;
+}
+

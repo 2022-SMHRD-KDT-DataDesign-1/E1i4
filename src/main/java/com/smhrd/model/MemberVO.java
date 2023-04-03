@@ -5,14 +5,12 @@ public class MemberVO {
 	private String member_pw;
 	private String nickname;
 	private String member_pwck;
-	private String gender;
 
-	public MemberVO(String member_id, String member_pw, String nickname, String member_pwck, String gender) {
+	public MemberVO(String member_id, String member_pw, String nickname, String member_pwck) {
 		super();
 		this.member_id = member_id;
 		this.member_pw = member_pw;
 		this.nickname = nickname;
-		this.gender = gender;
 		this.member_pwck = member_pwck;
 	}
 	
@@ -33,11 +31,7 @@ public class MemberVO {
 
 	public String getNickname() {
 		return nickname;
-	}
-
-	public String getGender() {
-		return gender;
-	}
+	}	
 
 	public String getMember_pwck() {
 		return member_pwck;

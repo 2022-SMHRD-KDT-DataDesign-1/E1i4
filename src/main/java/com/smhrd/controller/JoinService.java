@@ -16,22 +16,23 @@ public class JoinService implements Command {
 		String member_id = request.getParameter("member_id");
 		String member_pw = request.getParameter("member_pw");
 		String nickname = request.getParameter("nickname");
-		String gender = request.getParameter("gender");
 		String member_pwck = request.getParameter("member_pwck");
-		System.out.println(member_id + member_pw + nickname + gender + member_pwck);
-		MemberVO vo = new MemberVO (member_id, member_pw, nickname, gender,member_pwck);
+		System.out.println(member_id + member_pw + nickname  + member_pwck);
+		MemberVO vo = new MemberVO (member_id, member_pw, nickname,member_pwck);
 	     MemberDAO dao = new MemberDAO();
-	      int cnt =dao.insertMember(vo);		      
+	     int cnt =dao.insertMember(vo);		      
+	     
+	      System.out.println("----------------");
 	      if(cnt > 0) {
 	          System.out.println("회원가입 성공");
 	          //RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
-	          //request.setAttribute("joinEmail", email);
-	          
+//	          request.setAttribute("member_id", member_id);
+	          moveURL = "JoinSuccess.jsp?member_id="+member_id;
 	       } else {
 	          System.out.println("회원가입 실패");
-	         
+	          moveURL ="join.jsp";
 	       }
-	      moveURL = "Login.jsp";
+	      
 	      return moveURL;
 	}	
 	

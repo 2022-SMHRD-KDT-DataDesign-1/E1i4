@@ -72,36 +72,8 @@
             <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav> -->
-    <nav class="navbar navbar-expand-lg bg-black navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary">REVVIA</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <!-- <a href="index.html" class="nav-item nav-link active">Home</a> -->
-                <!-- search-btn -->
-                <div class="search-area">
-                    <input type="text" class="serach-input" name="" placeholder="search">
-                    <a class="search-btn" href="#">
-                        <i class="fas fa-search"></i>
-                    </a>
-                </div>
-
-                
-                <div class="nav-item dropdown" style="margin-left: 50px">
-                    <a href="" class="btn btn-primary py-4 d-none d-lg-block nav-link-dropdown-toggle" data-bs-toggle="dropdown" style="margin-right: 30px">독고운<!--<i class="fa fa-arrow-right ms-3"></i>--></a>
-                    <div class="dropdown-menu fade-down m-0" style="text-align: center; min-width: 80px; right: 11px; padding: 3px; position:absolute;">
-                        <a href="" class="dropdown-item">보관함</a>
-                        <a href="" class="dropdown-item">설정</a>
-                        <a href="" class="dropdown-item">로그아웃</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </nav>
+    	<!-- Navbar Start -->
+	<%@ include file="header.jsp" %>
     <!-- 상단바 끝 -->
 
 
@@ -129,7 +101,7 @@
 		teamDAO dao = new teamDAO();
 		List<teamVO> list = dao.wishList();
 		System.out.print(list.size());
-	%>  
+	%>   
 					   <%-- <%for(MemberVO m : list){ %>
 							<tr>
 								<td><%=m.getEmail()%></td>
@@ -137,7 +109,7 @@
 								<td><%=m.getAddress() %></td>
 								<td><a href ="DeleteService.do?email=<%=m.getEmail()%>">삭제</a></td>							
 							</tr>
-							<%} %>	 --%>					
+							<%} %> --%>	 				
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
