@@ -9,8 +9,8 @@
 	request.setCharacterEncoding("utf-8");
 	ArrayList<MovieVO> list = (ArrayList<MovieVO>)session.getAttribute("searchResult");
 
-	System.out.print(list.get(0).getMovie_title());
-	System.out.print(list.get(0).getPoster_link());
+/* 	System.out.print(list.get(0).getMovie_title());
+	System.out.print(list.get(0).getPoster_link()); */
 	
 %>
 <!DOCTYPE html>
@@ -79,13 +79,26 @@
 			</div>
 			<div class="row g-4">
 				<!-- start -->
-			   	<% for(int i=0; i<list.size(); i++) { %>
-					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-						<div class="team-item">
-							<div class="overflow-hidden"><img class="search-keyword-img" src="<%=list.get(i).getPoster_link() %>" alt="1"></div>
+				<% if(list.size() > 0) {%>
+				   	<% for(int i=0; i<list.size(); i++) { %>
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s" style="margin-bottom: 100px;">
+						<div class="search-result-movie-item">
+							<div class="overflow-hidden">
+								<a href="testimonial.jsp?movie_id=<%=list.get(i).getMovie_id()%>">
+									<img class="search-keyword-img" src="<%=list.get(i).getPoster_link() %>" alt="1">
+								</a>
+							</div>
 							<div class="position-relative d-flex justify-content-center" style="margin-top: -23px;"></div>
 						</div>
 					</div>
+					<%} %>
+				<%} %>
+				<% if(list.size() <= 0) { %>
+						<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s" style="margin-bottom: 20px;">
+							<div class="team-item">
+								<h3>찾을 수 없습니다....</h3>
+							</div>
+						</div>
 				<%} %>
 				<!-- end -->
 			</div>
