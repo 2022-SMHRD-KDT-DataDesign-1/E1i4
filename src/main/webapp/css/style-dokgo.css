@@ -455,7 +455,7 @@ body {
     justify-content: space-between;
     opacity: 0;
     transition: opcacity 0.5s ease;
-    transform: translateY(-251px);
+    transform: translateY(-245px);
 }
 
 .container:hover .navigator {

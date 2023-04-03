@@ -94,9 +94,9 @@
 					<%} %>
 				<%} %>
 				<% if(list.size() <= 0) { %>
-						<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s" style="margin-bottom: 20px;">
+						<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
 							<div class="team-item">
-								<h3>찾을 수 없습니다....</h3>
+								<h5>&nbsp;찾을 수 없습니다....</h5>
 							</div>
 						</div>
 				<%} %>
