@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.testimonialVO"%>
+<%@page import="com.smhrd.model.testimonialDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.model.MovieVO"%>
 <%@page import="java.util.List"%>
@@ -7,7 +9,7 @@
     
 <% 
 	request.setCharacterEncoding("utf-8");
-	ArrayList<MovieVO> list = (ArrayList<MovieVO>)session.getAttribute("searchResult");
+	ArrayList<testimonialVO> list = (ArrayList<testimonialVO>)session.getAttribute("searchResult");
 
 /* 	System.out.print(list.get(0).getMovie_title());
 	System.out.print(list.get(0).getPoster_link()); */

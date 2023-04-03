@@ -72,11 +72,17 @@
     <div>
          <%
     		
-        	testimonialVO movie_one = (testimonialVO)session.getAttribute("movie_one");
-         
+        	/* testimonialVO movie_one = (testimonialVO)session.getAttribute("movie_one"); */
+         	/* search */
+        	String movie_id = request.getParameter("movie_id");
+        	testimonialDAO dao = new testimonialDAO();
+        	testimonialVO movie_one = dao.deatilMovie(movie_id);
+        	
          	if(movie_one != null){
          		 System.out.print(movie_one.getMovie_title());
          	}
+         	
+
         
          %>
         <!-- 예고편 -->

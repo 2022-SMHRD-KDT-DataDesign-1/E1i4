@@ -5,21 +5,7 @@
 
 <mapper namespace="com.smhrd.db.MovieMapper">
 
-	<insert id="insertMovie" parameterType="MovieVO">
-		insert into movies
-		values(movie_num.nextval, #{movie_title}, #{genre}, #{movie_date},
-		#{director}, #{actors},
-		#{poster_link}, #{movie_rate}, #{synopsis}, #{trailer}, #{movie_age})
-	</insert>
-
-	<select id="showMovie" resultType="MovieVO">
-		select * from movies
-	</select>
-	
-	
 	<!-- search -->
-	<select id="searchMovie" resultType="MovieVO" parameterType="String">
-		select * from movies where movie_title like '%'||#{searchKeyword}||'%' 
-	</select>
+
 	
 </mapper>
