@@ -157,6 +157,3 @@ new Vue({
   });
   
   /*댓글 스크롤바*/
-$('.comment')
-        .stop()
-        .animate({ scrollTop: $('.comment')[0].scrollHeight }, 1000);
