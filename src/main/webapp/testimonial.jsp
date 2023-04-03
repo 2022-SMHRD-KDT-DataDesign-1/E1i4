@@ -150,7 +150,7 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    
         <!-- 리뷰영상 -->
         <div class="container1">
             <div class="text-center"> 
