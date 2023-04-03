@@ -86,10 +86,7 @@ public class testimonialVO {
 		
 	}
 
-	//getter	
-	public String getBoard_id() {
-		return board_id;
-	}
+	
 	//getter
 	public String getMember_id() {
 		return member_id;

@@ -5,16 +5,15 @@
 
 <mapper namespace="com.smhrd.db.WishListMapper">
 
-	<!-- <select id = "wishList" resultType="teamVO">
+<!-- 	<select id = "wishList" resultType="teamVO">
 		select *
 		from memberinfo a, movies b
 		where a.movie_id = b.movie_id and a.like_check = "1"
-	</select> -->
+	</select>  -->
 	
 	<select id = "wishList" resultType="teamVO">
-		select *
-		from memberinfo
-		
+		select poster_link
+		from movies where movie_id = 202
 	</select>
 	
 </mapper>

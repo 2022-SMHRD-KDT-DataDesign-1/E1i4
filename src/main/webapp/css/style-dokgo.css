@@ -638,3 +638,9 @@ body {
     padding-right: 0;
     border-right: none;
 }
+
+.search-keyword-img {
+    width: 270px;
+    height: auto;
+    border-radius: 10px;
+}

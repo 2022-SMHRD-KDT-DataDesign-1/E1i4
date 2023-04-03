@@ -123,7 +123,7 @@
 				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="<%=num%>s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">  <!-- 찜한영화 DB에서 불러오기 -->
-                            <a href = "testimonial.jsp"><img class="img-fluid" src=<%=m.getPoster_link()%> ></a>
+                            <a href = "testimonial.jsp"><img class="img-fluid" src=<%=m.getPoster_link()%> style="height: auto;"></a>
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         </div>
@@ -135,7 +135,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">  <!-- 찜한영화 DB에서 불러오기 -->
-                            <a href = "testimonial.jsp"><img class="img-fluid" src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg" ></a>
+                            <a href = "testimonial.jsp"><img class="img-fluid" src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg" style="height: auto;"></a>
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         </div>
