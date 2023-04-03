@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.model.indexVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.model.indexDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -153,15 +156,34 @@
 	<!-- Carousel End -->
 
 
+	<%
+		String genre = "SF";
+		indexDAO dao = new indexDAO();
+		List<indexVO> list = dao.movieList(genre);
+	
+		list.get(0).getMovie_title();
+	%>    
+
+<!-- sf, 드라마, 코미디, 공포, 판타지 -->
 
 	<!-- Service Start -->
 	<div class="container-xxl py-5" style="width: 100%">
 		<h4 class="show-movie-item-text"
 			style="margin-bottom: 25px; font-weight: bold;">Popular</h4>
 		<div class="container">
-			<div class="slick-service-item row g-4 col-lg-3 col-sm-6"
-				style="width: 1350px">
+			<div class="slick-service-item row g-4 col-lg-3 col-sm-6" style="width: 1350px">
+			<%int num = 0; %>
+			<%for(indexVO M : list){ %>
 				<div class="service-item text-center pt-3">
+					<img src="<%=M.getPoster_link()%>" alt="">
+				</div>
+				<%num++;
+				if(num == 9){
+					break;
+				}%>
+				 
+				
+				<!-- <div class="service-item text-center pt-3">
 					<a href="testimonial.jsp?movie_id=1">
 						<img src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg?type=m886_590_2" alt="">
 					</a>
@@ -200,7 +222,8 @@
 					<img
 						src="https://movie-phinf.pstatic.net/20220719_124/1658199507038N0QB6_JPEG/movie_image.jpg?type=m886_590_2"
 						alt="">
-				</div>
+				</div> -->
+			<%} %>
 			</div>
 			<div class="navigator">
 				<i class="fas fa-chevron-left prev"></i> <i
@@ -476,9 +499,7 @@
 	</div>
 
 	<!-- Footer Start -->
-<<<<<<< HEAD
 	<%@ include file="footer.jsp"%>
-=======
 	<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
 		<div class="container">
 			<div class="copyright">
@@ -509,7 +530,6 @@
 			</div>
 		</div>
 	</div>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4.git
 	<!-- Footer End -->
 
 
