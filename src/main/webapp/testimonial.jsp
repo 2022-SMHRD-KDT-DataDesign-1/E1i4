@@ -125,7 +125,7 @@
           
           </div>
              <!-- 댓글창 -->
-           <form class="chat_form" action="">
+           <form class="" action="chatService.do">
          <section id="app">
              <div class="containerMember">
                <div class="rows">
@@ -140,6 +140,7 @@
                  <div class="col-6">
                     <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
                    <button v-on:click="addItem()" class='primaryContained float-right' type="button">Add Comment</button>
+                   
                  </div><!-- End col -->
                </div><!--End Row -->
              </div><!--End Container -->

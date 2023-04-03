@@ -15,6 +15,7 @@ import com.smhrd.controller.JoinService;
 import com.smhrd.controller.LoginService;
 import com.smhrd.controller.LogoutService;
 import com.smhrd.controller.WishService;
+import com.smhrd.controller.chatService;
 import com.smhrd.controller.SearchService;
 
 @WebServlet("*.do")
@@ -76,6 +77,9 @@ public class Frontcontroller extends HttpServlet {
 		} else if (result.equals("SearchService.do")) {
 			// search
 			service = new SearchService();
+		} else if (result.equals("chatService.do")) {
+			// search
+			service = new chatService();
 		}
 
 		String moveURL= service.execute(request, response);

@@ -175,13 +175,19 @@
 			<%int num = 0; %>
 			<%for(indexVO M : list){ %>
 				<div class="service-item text-center pt-3">
+				<a href="testimonial.jsp?movie_id=1}">
 					<img src="<%=M.getPoster_link()%>" alt="">
+				</a>
 				</div>
 				<%num++;
 				if(num == 9){
 					break;
 				}%>
-				 
+				 <div class="service-item text-center pt-3">
+					<a href="testimonial.jsp?movie_id=1">
+						<img src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg?type=m886_590_2" alt="">
+					</a>
+				</div>
 				
 				<!-- <div class="service-item text-center pt-3">
 					<a href="testimonial.jsp?movie_id=1">
