@@ -87,11 +87,29 @@ public class testimonialVO {
 		this.movie_genre = movie_genre;
 	}
 
+	// 상세페이지 - 유튜브 정보
+	
+	public testimonialVO(String youtube_id,String movie_id, String youtube_type, String youtuber, String youtube_title,
+			String youtube_link, String img_link, String youtubemp4_link, String youtuberimg_link) {
+		super();
+		this.youtube_id = youtube_id;
+		this.movie_id = movie_id;
+		this.youtube_type = youtube_type;
+		this.youtuber = youtuber;
+		this.youtube_title = youtube_title;
+		this.youtube_link = youtube_link;
+		this.img_link = img_link;
+		this.youtubemp4_link = youtubemp4_link;
+		this.youtuberimg_link = youtuberimg_link;
+	}
+
+	
 	
 	//getter
 	public String getMember_id() {
 		return member_id;
 	}
+
 
 	public String getNickname() {
 		return nickname;
