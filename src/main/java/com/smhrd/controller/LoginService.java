@@ -28,6 +28,8 @@ public class LoginService implements Command{
 	      }else {
 	    	
 	    	  System.out.println("로그인 실패 ");
+	    	  	    	  
+	    	  
 	    	  moveURL="Login_3.jsp";
 	      }
 	      return moveURL;
