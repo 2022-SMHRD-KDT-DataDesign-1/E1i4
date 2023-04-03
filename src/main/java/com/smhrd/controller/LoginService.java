@@ -24,7 +24,7 @@ public class LoginService implements Command{
 	    	  System.out.println("로그인 성공");
 	    	  HttpSession session = request.getSession();
 	    	  session.setAttribute("login_vo", login_vo);
-	    	  moveURL="index-goun.html";
+	    	  moveURL="index-goun.jsp";
 	      }else {
 	    	
 	    	  System.out.println("로그인 실패 ");
