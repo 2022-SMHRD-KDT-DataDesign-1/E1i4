@@ -1,23 +1,21 @@
 package com.smhrd.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-
 import com.smhrd.db.SqlSessionManager;
 
-public class teamDAO {
+public class indexDAO {
 	
-	SqlSessionFactory sqlSessionFactory =  SqlSessionManager.getSqlSession();	
+SqlSessionFactory sqlSessionFactory =  SqlSessionManager.getSqlSession();	
 	
-	public List<teamVO> wishList() {
-		List<teamVO> list = null;
+	public List<indexVO> movieList(String genre) {
     	SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		list = sqlSession.selectList("wishList");
+    	List<indexVO> list = sqlSession.selectList("movieList", genre);
 		sqlSession.close();
+		
 		return list;
 	}
-	
+
 }

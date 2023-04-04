@@ -6,9 +6,24 @@
 <mapper namespace="com.smhrd.db.testimonialMapper">
 
 	<!-- 상세페이지 - 찜 -->
-	<insert id="uploadBoard" parameterType="BoardVO">
-  		insert into MEMBERINFO (LIKECHECK) values("1")
+	<insert id="likeCheck" parameterType="testimonialVO">
+  		insert into MEMBERINFO values ("1", #{member_id}, #{movie_id}, "1", "9.0")
+  		<!-- 컬럼 6개임 참고 -->
   	</insert>
+  	<!-- 찜 -->
+  	<!-- <update id="likeCheck" parameterType="testimonialVO">
+  		update memberinfo
+  		set like_check = like_check + 1
+  		where member_id = #{member_id} and movie_id = #{movie_id}
+  	</update>
+  	찜 취소
+  	<update id="likeCheck_cancel" parameterType="testimonialVO">
+  		update memberinfo
+  		set like_check = 0
+  		where member_id = #{member_id} and movie_id = #{movie_id}
+  	</update> -->
+  	
+  	
   	
 	<!-- 상세페이지 - 영화 정보 -->
 	<select id="SelectMovie" parameterType="testimonialVO" resultType="testimonialVO">

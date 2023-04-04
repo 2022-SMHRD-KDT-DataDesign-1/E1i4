@@ -112,22 +112,24 @@ $(document).ready(function() {
     $('[data-vbg]').youtube_background(); // 실행
     });
 
-    /* 찜 */
+/* 찜 - 버튼 바꾸기*/
+let number = $('#btnNum')
 
-const like =() => {
-
-   let num = document.getElementsByClassName('tgNum')[0]
-   if(num.innerText == 0){
-      num.innerText = Number(num.innerText)+1 
-      console.log('찜 성공')
-   } else if (num.innerText == 1){
-      num.innerText = Number(num.innerText)-1 
-      console.log('찜 취소')
-   }
-   
-}
-
-document.getElementById('cb5').addEventListener('click',like)
+let btnLike = $('#btnLike').click(()=>{
+	
+	let total = parseInt(number.text())
+	if(total == 0){
+		$('#btnLike').text('찜❤')
+		number.text(total+1)
+		console.log(total+1)
+	}
+	
+	if(total == 1){
+		$('#btnLike').text('저장💕')
+		number.text(total-1)
+		console.log(total-1)
+	}
+})
 
 /* 댓글 */
 $(document).ready(function(){ 
@@ -157,3 +159,6 @@ new Vue({
   });
   
   /*댓글 스크롤바*/
+$('.comment')
+        .stop()
+        .animate({ scrollTop: $('.comment')[0].scrollHeight }, 1000);

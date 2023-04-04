@@ -364,7 +364,7 @@ body {
 }
 
 .page-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
+    background: linear-gradientlinear-gradient(#1e1e1e, #131212), url();
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

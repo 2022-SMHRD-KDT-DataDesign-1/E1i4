@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.model.teamVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.model.teamDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -35,6 +38,41 @@
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- 상단바 -->
+    <!-- <nav class="navbar navbar-expand-lg bg-black navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h1 class="m-0 text-primary" ><i class="fa fa-book me-3"></i>REVVIA</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item active">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav> -->
+    	<!-- Navbar Start -->
 	<%@ include file="header.jsp" %>
     <!-- 상단바 끝 -->
 
@@ -47,7 +85,7 @@
                     <h1 class="display-3 text-white animated slideInDown">Wish List</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="index-goun.html">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Team</li>
                         </ol>
@@ -59,6 +97,19 @@
     <!-- Header End -->
 
 
+	<%
+		teamDAO dao = new teamDAO();
+		List<teamVO> list = dao.wishList();
+		System.out.print(list.size());
+	%>   
+					   <%-- <%for(MemberVO m : list){ %>
+							<tr>
+								<td><%=m.getEmail()%></td>
+								<td><%=m.getTel() %></td>
+								<td><%=m.getAddress() %></td>
+								<td><a href ="DeleteService.do?email=<%=m.getEmail()%>">삭제</a></td>							
+							</tr>
+							<%} %> --%>	 				
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -67,23 +118,28 @@
                 <h1 class="mb-5">내가 찜한 영화</h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            	<%for(teamVO m : list){ %>
+            	<%double num = 0.1;%>
+				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="<%=num%>s">
                     <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg" >
+                        <div class="overflow-hidden">  <!-- 찜한영화 DB에서 불러오기 -->
+                            <a href = "testimonial.jsp"><img class="img-fluid" src=<%=m.getPoster_link()%> style="height: auto;"></a>
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <!--<div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div> -->
                         </div>
-                        <div>''</div>
-                        <!-- <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div> -->
+                        <div style="background-color: #1e1e1e">.</div>
+                    </div>
+                </div>
+                <% num += 0.2; %>
+				<%} %>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">  <!-- 찜한영화 DB에서 불러오기 -->
+                            <a href = "testimonial.jsp"><img class="img-fluid" src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg" style="height: auto;"></a>
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                        </div>
+                        <div style="background-color: #1e1e1e">.</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -93,17 +149,7 @@
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20130206_29/13601146693401seof_JPEG/movie_image.jpg" alt="">
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <!--<div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
                         </div>
-                        
-                        <!-- <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -122,6 +168,7 @@
                             <h5 class="mb-0">Instructor Name</h5>
                             <small>Designation</small>
                         </div> -->
+                        <div style="background-color: #1e1e1e">.</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
@@ -142,7 +189,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20160106_138/1452044846608eaFcJ_JPEG/movie_image.jpg" alt="">
@@ -160,7 +207,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20221216_283/1671153488789d3g4j_JPEG/movie_image.jpg" alt="">
@@ -179,7 +226,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20220920_244/1663641181915y0nJN_JPEG/movie_image.jpg " alt="">
@@ -197,7 +244,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.5s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20221215_185/1671091761840XXpCR_JPEG/movie_image.jpg " alt="">

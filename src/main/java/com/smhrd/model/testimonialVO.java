@@ -105,6 +105,13 @@ public class testimonialVO {
 
 	
 	
+	public testimonialVO(String like_check) {
+		
+		this.like_check = like_check;
+		
+	}
+
+	
 	//getter
 	public String getMember_id() {
 		return member_id;
