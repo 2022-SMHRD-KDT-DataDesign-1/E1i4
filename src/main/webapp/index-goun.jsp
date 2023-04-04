@@ -262,7 +262,7 @@
 				</a>
 				</div>
 				<%num++;
-				if(num == 9){
+				if(num == 8){
 					break;
 				}%>
 				 <div class="service-item text-center pt-3">
