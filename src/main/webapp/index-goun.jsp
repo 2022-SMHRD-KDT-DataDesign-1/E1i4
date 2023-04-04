@@ -217,7 +217,7 @@
 			<%int num = 0; %>
 			<%for(indexVO M : list){ %>
 				<div class="service-item text-center pt-3">
-				<a href="testimonial.jsp?movie_id=<%=M.getMovie_id()%>}">
+				<a href="testimonial.jsp?movie_id=<%=M.getMovie_id()%>">
 					<img src="<%=M.getPoster_link()%>" alt="">
 				</a>
 				</div>

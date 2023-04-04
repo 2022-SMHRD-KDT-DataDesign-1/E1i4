@@ -102,12 +102,13 @@
          <p id="movie_genre"><%= movie_one.getMovie_genre() %></p>            
          <P id="movie_title"><%= movie_one.getMovie_title() %></P>
 
+		<div class = score>
              <!-- 총 평점 -->
              <p class="all-score">⭐ <%= movie_one.getMovie_rate() %></p>
 
 		<!-- 찜- 버튼 바꾸기  -->
-		<button id="btnLike">찜❤</button><span id="btnNum">0</span>
-		
+		<button id="btnLike">찜🤞</button><span id="btnNum">0</span>
+		</div>
         <!-- 찜 누르면 테이블에 1 저장 누르면 0으로 -->
 
         <P id="movie_actor"><%= movie_one.getActors() %></P>         

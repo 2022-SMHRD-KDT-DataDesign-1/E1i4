@@ -116,16 +116,16 @@ $(document).ready(function() {
 let number = $('#btnNum')
 
 let btnLike = $('#btnLike').click(()=>{
-	
+	$('#btnLike').text('저장💕')
 	let total = parseInt(number.text())
 	if(total == 0){
-		$('#btnLike').text('찜❤')
+		$('#btnLike').text('저장💕')
 		number.text(total+1)
 		console.log(total+1)
 	}
 	
 	if(total == 1){
-		$('#btnLike').text('저장💕')
+		$('#btnLike').text('찜🤞')
 		number.text(total-1)
 		console.log(total-1)
 	}
