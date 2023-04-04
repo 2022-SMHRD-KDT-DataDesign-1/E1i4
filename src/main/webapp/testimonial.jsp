@@ -78,6 +78,7 @@
            /* testimonialVO movie_one = (testimonialVO)session.getAttribute("movie_one"); */
             /* search */
            String movie_id = request.getParameter("movie_id");
+           session.setAttribute("movie_id", movie_id);
            
            testimonialDAO dao = new testimonialDAO();
            testimonialVO movie_one = dao.deatilMovie(movie_id);
@@ -89,9 +90,6 @@
                 System.out.print(youtube_list.get(0).getYoutube_title());
                
             }
-            
-
-        
          %>
         <!-- 예고편 -->
         <div class="trailer" muted="false" data-vbg-autoplay="true" data-vbg="<%= movie_one.getTrailer()%>"></div>
@@ -102,13 +100,15 @@
          <p id="movie_genre"><%= movie_one.getMovie_genre() %></p>            
          <P id="movie_title"><%= movie_one.getMovie_title() %></P>
 
+		<form method="post" action="WishService" target="myHiddenFrame">
 		<div class = score>
              <!-- 총 평점 -->
              <p class="all-score">⭐ <%= movie_one.getMovie_rate() %></p>
 
 		<!-- 찜- 버튼 바꾸기  -->
-		<button id="btnLike">찜🤞</button><span id="btnNum">0</span>
+		<input type="submit" name = like_check id="btnLike" value="찜🤞"><span id="btnNum">0</span>
 		</div>
+		</form>
         <!-- 찜 누르면 테이블에 1 저장 누르면 0으로 -->
 
         <P id="movie_actor"><%= movie_one.getActors() %></P>         
@@ -336,5 +336,6 @@
     <script src="js/mainyu.js"></script>
     <!-- 예고편 -->
     <script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
+    <iframe  name="myHiddenFrame"  style="display:none;"></iframe>
 </body>
 </html>
