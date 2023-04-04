@@ -101,25 +101,17 @@
          <p id="movie_age">관람 등급 : <%= movie_one.getMovie_age() %></p>
          <p id="movie_genre"><%= movie_one.getMovie_genre() %></p>            
          <P id="movie_title"><%= movie_one.getMovie_title() %></P>
+
+		<div class = score>
              <!-- 총 평점 -->
              <p class="all-score">⭐ <%= movie_one.getMovie_rate() %></p>
-        <!-- 찜 -->   
-        <form action="WishService.do" method="post">
-        <ul class="tg-list">
-            <li class="tg-list-item">
-                <input class="tgl tgl-flip" id="cb5" type="checkbox" /><label class="tgl-btn" data-tg-off="찜❤" data-tg-on="저장💕" for="cb5"></label>
-                <input type="submit" value = "ddd">
-            </li>
-            <li>
-                <span class="tgNum">0</span>
-            </li>
-        </ul> 
 
-        </form>
-
+		<!-- 찜- 버튼 바꾸기  -->
+		<button id="btnLike">찜🤞</button><span id="btnNum">0</span>
+		</div>
         <!-- 찜 누르면 테이블에 1 저장 누르면 0으로 -->
 
-        <P id="movie_actor">주연배우 : <%= movie_one.getActors() %></P>         
+        <P id="movie_actor"><%= movie_one.getActors() %></P>         
          <P id="movie_story"> <%= movie_one.getSynopsis() %> </P>
           <br>   
           
@@ -171,8 +163,8 @@
                     <!-- 유튜버 이름 -->
                     <h5 class="mb-0"><%=youtube_list.get(i).getYoutuber() %></h5>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>              
-                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>&youtube_id=<%=youtube_list.get(i).getYoutube_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>              
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>&youtube_id=<%=youtube_list.get(i).getYoutube_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
                     </div>
                 </div>
             
@@ -199,8 +191,8 @@
                     <!-- 유튜버 이름 -->
                     <h5 class="mb-0"><%=youtube_list.get(i).getYoutuber() %></h5>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>
-                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>&youtube_id=<%=youtube_list.get(i).getYoutube_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>&youtube_id=<%=youtube_list.get(i).getYoutube_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
                     </div>
                 </div>
               
@@ -226,8 +218,8 @@
                     <!-- 유튜버 이름 -->
                     <h5 class="mb-0"><%=youtube_list.get(i).getYoutuber() %></h5>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>
-                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>&youtube_id=<%=youtube_list.get(i).getYoutube_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>&youtube_id=<%=youtube_list.get(i).getYoutube_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
                     </div>
                 </div>
                
