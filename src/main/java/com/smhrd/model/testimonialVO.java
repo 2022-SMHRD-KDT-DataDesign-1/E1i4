@@ -102,6 +102,7 @@ public class testimonialVO {
 		this.youtubemp4_link = youtubemp4_link;
 		this.youtuberimg_link = youtuberimg_link;
 	}
+	
 
 	
 	
@@ -112,6 +113,13 @@ public class testimonialVO {
 	}
 
 	
+	// 찜
+	public testimonialVO(String member_id, String movie_id) {
+		super();
+		this.member_id = member_id;
+		this.movie_id = movie_id;
+	}
+
 	//getter
 	public String getMember_id() {
 		return member_id;
