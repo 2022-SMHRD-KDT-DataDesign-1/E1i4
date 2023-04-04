@@ -140,7 +140,7 @@
                  <div class="col-6">
                     <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
                    <button v-on:click="addItem()" class='primaryContained float-right' type="button">Add Comment</button>
-                   
+                  
                  </div><!-- End col -->
                </div><!--End Row -->
              </div><!--End Container -->

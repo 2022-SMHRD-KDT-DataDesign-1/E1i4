@@ -7,7 +7,7 @@
 
 	<!-- 상세페이지 - 찜 -->
 	<insert id="likeCheck" parameterType="testimonialVO">
-  		insert into MEMBERINFO values ("1", #{member_id}, #{movie_id}, "1", "9.0")
+  		insert into MEMBERINFO values (R_NUM.nextval, #{member_id}, "굿", "1", "9.0")
   		<!-- 컬럼 6개임 참고 -->
   	</insert>
   	<!-- 찜 -->
