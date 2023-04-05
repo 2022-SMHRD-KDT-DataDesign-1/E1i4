@@ -63,4 +63,13 @@ public class testimonialDAO {
 			return youtube_list;
 		}
 		
+		
+		public List<RecommendVO> recommendMovie(String movie_id) {
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			List<RecommendVO> recommendMovieList = sqlSession.selectList("recommendMovie", movie_id);
+			sqlSession.close();
+			
+			return recommendMovieList;
+		}
+		
 }

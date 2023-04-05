@@ -1,7 +1,9 @@
+<%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	
+	MemberVO login_vo = (MemberVO)session.getAttribute("login_vo");
+	String member_id = login_vo.getMember_id();
 %>
 <!DOCTYPE html>
 <html>
@@ -70,7 +72,7 @@
 					<div class="modal__overlay"></div>
 					<div class="modal__content">
 						<!-- <button id="closeBtn">❌</button> -->
-						<h2 class="modal__title">독고운✨님이 찜한 영화에 기반한 추천 결과입니다!</h2>
+						<h2 class="modal__title"><%=login_vo.getNickname() %>✨님이 찜한 영화에 기반한 추천 결과입니다!</h2>
 						<div class="ai-slick-wrapper">
 							<div class="ai-slick-item">
 								<img src="https://movie-phinf.pstatic.net/20140507_216/1399432285654kL0n6_JPEG/movie_image.jpg?type=m886_590_2" alt="">
@@ -104,7 +106,7 @@
 					</div>
 				</div>
 				<div class="nav-item dropdown">
-					<a href="" class="btn btn-primary py-4 d-none d-lg-block nav-link-dropdown-toggle" data-bs-toggle="dropdown" style="font-size: 18px; padding-right: 30px; margin-right: 10px">독고운<!--<i class="fa fa-arrow-right ms-3"></i>--></a>
+					<a href="" class="btn btn-primary py-4 d-none d-lg-block nav-link-dropdown-toggle" data-bs-toggle="dropdown" style="font-size: 18px; padding-right: 30px; margin-right: 10px"><%=login_vo.getNickname()%><!--<i class="fa fa-arrow-right ms-3"></i>--></a>
 					<div class="dropdown-menu fade-down m-0" id="dropdown-mypage"
 						style="text-align: center; min-width: 80px; right: 10px; padding: 3px; position: absolute;">
 						<a href="team.jsp" class="dropdown-item">보관함</a> 
