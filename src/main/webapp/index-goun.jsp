@@ -368,7 +368,36 @@
 	</div> --%>
 
 	<!-- Footer Start -->
-	<%@ include file="footer.jsp"%>
+	<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+		<div class="container">
+			<div class="copyright">
+				<div class="row">
+					<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+						<h6>서비스 소개 | 개인정보 처리 방침 | 이용약관 | 고객센터 | 채용정보</h6>
+						<br> <span style="word-break: break-all">E1I4 주식회사 |
+							대표이사 독고운</span><br> <span>고객센터 1588-8282 (평일 09:00~18:00 /
+							점심시간 12:50~14:10 / 주말 및 공휴일 휴무)</span><br> <span>사업자등록번호
+							220-88-38020 | 호스팅서비스제공자 : 스마트인재개발원</span><br> <span>광주광역시
+							동구 예술길 31-15 4층 D반 | 전자우편주소 : godoli@smhrd.com</span><br> &copy; <a
+							class="border-bottom" href="#">REVVIA</a>, All Right Reserved.
+
+						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+						Designed By <a class="border-bottom" href="https://htmlcodex.com">DGO</a><br>
+						<br> Distributed By <a class="border-bottom"
+							href="https://themewagon.com">E1I4</a>
+					</div>
+					<div class="col-md-6 text-center text-md-end">
+						<div class="footer-menu">
+							<a href="">Home</a> 
+							<a href="">Cookies</a> 
+							<a href="">Help</a> 
+							<a href="">FQAs</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<!-- Footer End -->
 
