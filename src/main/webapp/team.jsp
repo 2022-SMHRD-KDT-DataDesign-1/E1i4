@@ -107,13 +107,14 @@
 		
 		String movie_id = (String)session.getAttribute("movie_id");
 		
+		
 	%>   
 					    				
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+                
                 <h1 class="mb-5">내가 찜한 영화</h1>
             </div>
             <div class="row g-4">
