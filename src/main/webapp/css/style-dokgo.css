@@ -543,7 +543,7 @@ body {
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text {
-    background: var(--primary) !important;
+    background: #1e1e1e !important;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text * {
