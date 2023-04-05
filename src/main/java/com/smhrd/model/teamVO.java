@@ -10,7 +10,6 @@ public class teamVO {
 		private String member_rate;
 		
 		private String movie_title;
-		private String genre;
 		private String movie_date;
 		private String director;
 		private String actors;
@@ -20,15 +19,16 @@ public class teamVO {
 		private String synopsis;
 		private String trailer;
 		private String movie_age;
+		private String movie_genre;
 		
 		public teamVO() {
 			
 		}
 
 		public teamVO(String r_num, String member_id, String movie_id, String member_comment, String like_check,
-				String member_rate, String movie_title, String genre, String movie_date, String director, String actors,
+				String member_rate, String movie_title, String movie_date, String director, String actors,
 				String poster_link, String movie_rate, String movie_time, String synopsis, String trailer,
-				String movie_age) {
+				String movie_age, String movie_genre) {
 			super();
 			this.r_num = r_num;
 			this.member_id = member_id;
@@ -37,7 +37,7 @@ public class teamVO {
 			this.like_check = like_check;
 			this.member_rate = member_rate;
 			this.movie_title = movie_title;
-			this.genre = genre;
+			this.movie_genre = movie_genre;
 			this.movie_date = movie_date;
 			this.director = director;
 			this.actors = actors;
@@ -78,7 +78,7 @@ public class teamVO {
 		}
 
 		public String getGenre() {
-			return genre;
+			return movie_genre;
 		}
 
 		public String getMovie_date() {
