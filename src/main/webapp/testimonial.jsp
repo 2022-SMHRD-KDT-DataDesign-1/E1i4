@@ -111,7 +111,10 @@
 		</form>
         <!-- 찜 누르면 테이블에 1 저장 누르면 0으로 -->
 
-        <P id="movie_actor"><%= movie_one.getActors() %></P>         
+			<% if(movie_one.getActors() != null){ %>
+				
+        <P id="movie_actor">주연배우 : <%= movie_one.getActors() %></P>
+        <%} %>         
          <P id="movie_story"> <%= movie_one.getSynopsis() %> </P>
           <br>   
           
