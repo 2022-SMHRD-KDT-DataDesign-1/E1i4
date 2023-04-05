@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="login3.css" />
 
 <title>사용자 로그인</title>
+<!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 	

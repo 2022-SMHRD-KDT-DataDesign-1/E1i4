@@ -8,6 +8,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <link rel="stylesheet" href="Login_1.css" />
 <title>REVVIA</title>
+<!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 	<a href="Login_1.jsp" class="logo">REVVIA</a>
