@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.model.MemberVO"%>
+<%@page import="com.smhrd.model.indexVO"%>
+<%@page import="com.smhrd.model.indexDAO"%>
 <%@page import="com.smhrd.model.teamVO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.teamDAO"%>
@@ -101,15 +104,11 @@
 		teamDAO dao = new teamDAO();
 		List<teamVO> list = dao.wishList();
 		System.out.print(list.size());
+		
+		String movie_id = (String)session.getAttribute("movie_id");
+		
 	%>   
-					   <%-- <%for(MemberVO m : list){ %>
-							<tr>
-								<td><%=m.getEmail()%></td>
-								<td><%=m.getTel() %></td>
-								<td><%=m.getAddress() %></td>
-								<td><a href ="DeleteService.do?email=<%=m.getEmail()%>">삭제</a></td>							
-							</tr>
-							<%} %> --%>	 				
+					    				
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -118,12 +117,12 @@
                 <h1 class="mb-5">내가 찜한 영화</h1>
             </div>
             <div class="row g-4">
-            	<%for(teamVO m : list){ %>
             	<%double num = 0.1;%>
+            	<%for(teamVO m : list){ %>
 				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="<%=num%>s">
-                    <div class="team-item bg-light">
+                    <div class="team-item bg-black">
                         <div class="overflow-hidden">  <!-- 찜한영화 DB에서 불러오기 -->
-                            <a href = "testimonial.jsp"><img class="img-fluid" src=<%=m.getPoster_link()%> style="height: auto;"></a>
+                            <a href = "testimonial.jsp?movie_id=<%=m.getMovie_id()%>"><img class="img-fluid" src=<%=m.getPoster_link()%> style="height: auto;"></a>
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         </div>
@@ -132,136 +131,22 @@
                 </div>
                 <% num += 0.2; %>
 				<%} %>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">  <!-- 찜한영화 DB에서 불러오기 -->
-                            <a href = "testimonial.jsp"><img class="img-fluid" src="https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg" style="height: auto;"></a>
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        </div>
-                        <div style="background-color: #1e1e1e">.</div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                                                   <!-- 여기에 자신이 찜한 영화 넣어야함 -->
-                            <img class="img-fluid" src="https://movie-phinf.pstatic.net/20130206_29/13601146693401seof_JPEG/movie_image.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://movie-phinf.pstatic.net/20230206_264/1675649061557DaJHD_JPEG/movie_image.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <!-- <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
-                        </div>
-                        <!-- <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div> -->
-                        <div style="background-color: #1e1e1e">.</div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://movie-phinf.pstatic.net/20220615_63/1655270906406BGdFF_JPEG/movie_image.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <!-- <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
-                        </div>
-                        <!-- <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://movie-phinf.pstatic.net/20160106_138/1452044846608eaFcJ_JPEG/movie_image.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <!-- <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
-                        </div>
-                        <!-- <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://movie-phinf.pstatic.net/20221216_283/1671153488789d3g4j_JPEG/movie_image.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <!-- <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
-                        </div>
-                        
-                        <!-- <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://movie-phinf.pstatic.net/20220920_244/1663641181915y0nJN_JPEG/movie_image.jpg " alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <!-- <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
-                        </div>
-                        <!-- <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.5s">
+                
+                
+                
+                
+                <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="1.5s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="https://movie-phinf.pstatic.net/20221215_185/1671091761840XXpCR_JPEG/movie_image.jpg " alt="">
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <!-- <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
+                           
                         </div>
-                        <!-- <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div> -->
+                        
                     </div>
-                </div>
+                </div> -->
+                <!-- 영화 가져오기 끝 -->
             </div>
         </div>
     </div>
