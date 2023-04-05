@@ -97,8 +97,8 @@
         <div class="movie_import">
          <p id="movie_date"><%= movie_one.getMovie_date()%></p>
          <p id="movie_age">관람 등급 : <%= movie_one.getMovie_age() %></p>
-         <p id="movie_genre"><%= movie_one.getMovie_genre() %></p>            
          <P id="movie_title"><%= movie_one.getMovie_title() %></P>
+         <p id="movie_genre"><%= movie_one.getMovie_genre() %></p>            
 
 		<form method="post" action="WishService" target="myHiddenFrame">
 		<div class = score>
@@ -114,6 +114,8 @@
 			<% if(movie_one.getActors() != null){ %>
 				
         <P id="movie_actor">주연배우 : <%= movie_one.getActors() %></P>
+        <%} else { %>
+       <!--  <P id="movie_actor">주연배우 : - </P> -->
         <%} %>         
          <P id="movie_story"> <%= movie_one.getSynopsis() %> </P>
           <br>   
@@ -153,8 +155,7 @@
         <!-- 리뷰영상 -->
         <div class="container1">
             <div class="text-center"> 
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">리뷰</h1>
+                <h1 class="mb-5">리뷰 영상🎥</h1>
             </div>
                <div class="owl-carousel testimonial-carousel position-relative">
             <%for(int i = 0 ; i < youtube_list.size(); i++){ %>
@@ -181,8 +182,8 @@
         <!-- 결말포함영상 -->
         <div class="container2">
             <div class="text-center"> 
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">결말 포함</h1>
+                
+                <h1 class="mb-5">결말 영상🎬</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
              <%for(int i = 0 ; i < youtube_list.size(); i++){ %>
@@ -208,8 +209,8 @@
         <!-- 해석영상 -->
         <div class="container3">
             <div class="text-center"> 
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">해석</h1>
+              
+                <h1 class="mb-5">해석 영상📹</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
               <%for(int i = 0 ; i < youtube_list.size(); i++){ %>
