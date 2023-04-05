@@ -101,13 +101,21 @@
 
 
 	<%
-		teamDAO dao = new teamDAO();
+	/* 	teamDAO dao = new teamDAO();
 		List<teamVO> list = dao.wishList();
 		System.out.print(list.size());
 		
-		String movie_id = (String)session.getAttribute("movie_id");
+		String movie_id = (String)session.getAttribute("movie_id"); */
 		
 		
+	login_vo = (MemberVO)session.getAttribute("login_vo");
+	member_id = login_vo.getMember_id();
+	teamDAO dao = new teamDAO();
+	List<teamVO> list = dao.wishList(member_id);
+	System.out.print(list.size());
+	System.out.print("member_id " + member_id);
+
+	String movie_id = (String) session.getAttribute("movie_id");
 	%>   
 					    				
     <!-- Team Start -->

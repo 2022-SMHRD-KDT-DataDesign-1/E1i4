@@ -20,7 +20,8 @@ public class teamVO {
 		private String trailer;
 		private String movie_age;
 		private String movie_genre;
-		
+
+
 		public teamVO() {
 			
 		}
@@ -47,6 +48,15 @@ public class teamVO {
 			this.synopsis = synopsis;
 			this.trailer = trailer;
 			this.movie_age = movie_age;
+		}
+		
+		
+		public teamVO(String r_num, String member_id, String movie_id, String like_check) {
+			super();
+			this.r_num = r_num;
+			this.member_id = member_id;
+			this.movie_id = movie_id;
+			this.like_check = like_check;
 		}
 
 		public String getR_num() {
