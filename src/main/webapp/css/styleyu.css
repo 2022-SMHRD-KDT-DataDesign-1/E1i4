@@ -473,11 +473,11 @@ button.primaryContained:hover {
 }
 
     /* 리뷰영상 */
-  #title{ color: white; margin:5px 0px 0px 60px; width: 450px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}   
+  #title{ color: white; margin:5px 0px 0px 15px; width: 530px;  overflow: hidden; text-overflow: ellipsis; white-space: normal; line-height:1.2; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient:vertical;}   
 
-  .container1{margin: -400px 0px 0px 0px;}
+  .container1{margin: -300px 0px 0px 0px;}
   #review{ width:350px; height: 300px; top: 950px; bottom: 0px; right: 0px; left: 200px;}
-  #review[poster]{width:475px ; height:400px; margin: 0px 0px 0px 0px;}
+  #review[poster]{width:800px ; height:400px; margin: 0px 0px 0px -120px;}
  
   /* 결말 포함 */
   .container2{margin: 200px 0px 0px 0px;}
