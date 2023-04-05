@@ -13,6 +13,7 @@
 		<typeAlias type="com.smhrd.model.teamVO" alias="teamVO"/>
 		<typeAlias type="com.smhrd.model.testimonialVO" alias="testimonialVO"/>
 		<typeAlias type="com.smhrd.model.indexVO" alias="indexVO"/>
+		<typeAlias type="com.smhrd.model.RecommendVO" alias="RecommendVO"/>
 	</typeAliases>
 	
 

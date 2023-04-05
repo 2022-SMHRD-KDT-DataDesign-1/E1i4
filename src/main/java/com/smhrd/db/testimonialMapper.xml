@@ -43,6 +43,10 @@
 	<select id="detailYoutube" resultType="testimonialVO">
 		select * from youtubes where movie_id = #{movie_id}
 	</select>
-		
+	
+	<!-- recommendMovie -->
+	<select id="recommendMovie" resultType="RecommendVO">
+		select * from recommend where movie_id = #{movie_id}
+	</select>
 	
 </mapper>

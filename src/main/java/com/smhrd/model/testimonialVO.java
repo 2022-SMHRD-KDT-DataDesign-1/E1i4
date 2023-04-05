@@ -103,8 +103,6 @@ public class testimonialVO {
 		this.youtuberimg_link = youtuberimg_link;
 	}
 	
-
-	
 	
 	public testimonialVO(String like_check) {
 		
@@ -119,6 +117,7 @@ public class testimonialVO {
 		this.member_id = member_id;
 		this.movie_id = movie_id;
 	}
+
 
 	//getter
 	public String getMember_id() {
