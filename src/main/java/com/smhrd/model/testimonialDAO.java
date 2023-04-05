@@ -64,12 +64,13 @@ public class testimonialDAO {
 		}
 		
 		
-		public List<RecommendVO> recommendMovie(String movie_id) {
+		public List<testimonialVO> recommendMovie(String member_id) {
 			SqlSession sqlSession = sqlSessionFactory.openSession(true);
-			List<RecommendVO> recommendMovieList = sqlSession.selectList("recommendMovie", movie_id);
+			List<testimonialVO> list = sqlSession.selectList("recommendMovie", member_id);
 			sqlSession.close();
 			
-			return recommendMovieList;
+			return list;
 		}
 		
+		// 추천 페이지
 }

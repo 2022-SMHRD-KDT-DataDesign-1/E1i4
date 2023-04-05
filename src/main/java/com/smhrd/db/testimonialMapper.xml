@@ -45,8 +45,8 @@
 	</select>
 	
 	<!-- recommendMovie -->
-	<select id="recommendMovie" resultType="RecommendVO">
-		select * from recommend where movie_id = #{movie_id}
+	<select id="recommendMovie" resultType="testimonialVO">
+		select a.* from movies a, recommend b where a.movie_id = b.movie_id and b.member_id = #{member_id}
 	</select>
 	
 </mapper>

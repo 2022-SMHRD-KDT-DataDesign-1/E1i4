@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.testimonialVO"%>
+<%@page import="com.smhrd.model.testimonialDAO"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@page import="com.smhrd.model.indexVO"%>
 <%@page import="java.util.List"%>
@@ -7,6 +9,9 @@
 <%
 	MemberVO login_vo = (MemberVO)session.getAttribute("login_vo");
 	String member_id = login_vo.getMember_id();
+	
+	testimonialDAO dao = new testimonialDAO();
+	List<testimonialVO> list = dao.recommendMovie(member_id);
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -155,12 +160,14 @@
 						<!-- <button id="closeBtn">❌</button> -->
 						<h2 class="modal__title"><%=login_vo.getNickname() %>✨님이 찜한 영화에 기반한 추천 결과입니다!</h2>
 						<div class="ai-slick-wrapper">
+							<%for(int i=0; i<list.size(); i++){ %>
 							<div class="ai-slick-item">
 								<img
-									src="https://movie-phinf.pstatic.net/20140507_216/1399432285654kL0n6_JPEG/movie_image.jpg?type=m886_590_2"
+									src="<%=list.get(i).getPoster_link() %>"
 									alt="">
 							</div>
-							<div class="ai-slick-item">
+							<%} %>
+							<!-- <div class="ai-slick-item">
 								<img
 									src="https://movie-phinf.pstatic.net/20190617_238/15607345554570jcTV_JPEG/movie_image.jpg?type=m886_590_2"
 									alt="">
@@ -194,7 +201,7 @@
 								<img
 									src="https://movie-phinf.pstatic.net/20220719_124/1658199507038N0QB6_JPEG/movie_image.jpg?type=m886_590_2"
 									alt="">
-							</div>
+							</div> -->
 						</div>
 						<div class="ai-navigator">
 							<i class="fas fa-chevron-left ai-prev"></i> <i
@@ -301,7 +308,7 @@
 
 	<%
 		String genre[] = {"애니", "스릴러", "공포", "SF", "드라마"};
-		indexDAO dao = new indexDAO();
+		indexDAO index_dao = new indexDAO();
 		/* list.get(0).getMovie_title(); */
 	%>
 
@@ -309,7 +316,7 @@
 
 	<!-- Service Start -->
 	<%for(int i = 0; i < genre.length; i++) {
-		List<indexVO> list = dao.movieList(genre[i]);
+		List<indexVO> index_list = index_dao.movieList(genre[i]);
 	%>
 	<div class="container-xxl py-5" style="width: 100%">
 		<h4 class="show-movie-item-text"
@@ -318,7 +325,7 @@
 			<div class="slick-service-item row g-4 col-lg-3 col-sm-6"
 				style="width: 1350px">
 				<%int num = 0; %>
-				<%for(indexVO M : list){ %>
+				<%for(indexVO M : index_list){ %>
 				<div class="service-item text-center pt-3">
 					<a href="testimonial.jsp?movie_id=<%=M.getMovie_id()%>"> <img
 						src="<%=M.getPoster_link()%>" alt="">
@@ -370,9 +377,8 @@
 	<!-- Footer Start -->
 
 
-	<%@ include file="footer.jsp"%>
 
-	<!-- <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+	<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
 		<div class="container">
 			<div class="copyright">
 				<div class="row">
