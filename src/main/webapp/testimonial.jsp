@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.model.MemberVO"%>
+<%@page import="com.smhrd.model.MessageVO"%>
+<%@page import="com.smhrd.model.MessageDAO"%>
 <%@page import="com.smhrd.model.testimonialDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.testimonialVO"%>
@@ -28,9 +31,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/styleyu.css" rel="stylesheet">
-    
-    <!-- 폰트 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
     
 <body>
  <!-- Navbar Start -->
@@ -76,44 +76,50 @@
     <!-- Header Start -->
 
     <div>
+        <!-- . -->
          <%
-          
-           /* testimonialVO movie_one = (testimonialVO)session.getAttribute("movie_one"); */
             /* search */
            String movie_id = request.getParameter("movie_id");
            session.setAttribute("movie_id", movie_id);
+           System.out.println("cheeck:" + movie_id);
            
-           testimonialDAO dao = new testimonialDAO();
+           login_vo = (MemberVO)session.getAttribute("login_vo");
+           member_id = login_vo.getMember_id();
+           String nickname = login_vo.getNickname();
+           
+           testimonialDAO dao = new testimonialDAO();  
+           
            testimonialVO movie_one = dao.deatilMovie(movie_id);
            
+           MessageDAO dao2 = new MessageDAO();
+           List<MessageVO> m_list = dao2.showCommend(movie_id);
+                      
            List<testimonialVO> youtube_list = dao.detailYoutube(movie_id);
            
             if(movie_one != null){
                 System.out.print(movie_one.getMovie_title());
                 System.out.print(youtube_list.get(0).getYoutube_title());
                
-            }
+            }           
          %>
         <!-- 예고편 -->
-        <div class="trailer" muted="false" data-vbg-autoplay="true" data-vbg="<%= movie_one.getTrailer()%>"></div>
+        <div class="trailer" data-vbg-autoplay="true" data-vbg="<%= movie_one.getTrailer()%>"></div>
         <!-- 영화정보  -->
         <div class="movie_import">
-         <p id="movie_date"><%= movie_one.getMovie_date()%></p>
-         <p id="movie_age">관람 등급 : <%= movie_one.getMovie_age() %></p>
-         <P id="movie_title"><%= movie_one.getMovie_title() %></P>
-         <p id="movie_genre"><%= movie_one.getMovie_genre() %></p>            
-
-		<form method="post" action="WishService" target="myHiddenFrame">
-		<div class = score>
-             <!-- 총 평점 -->
-             <p class="all-score">⭐ <%= movie_one.getMovie_rate() %></p>
-
-		<!-- 찜- 버튼 바꾸기  -->
-		<input type="submit" name = like_check id="btnLike" value="찜🤞"><span id="btnNum">0</span>
-		</div>
-		</form>
-        <!-- 찜 누르면 테이블에 1 저장 누르면 0으로 -->
-
+	         <p id="movie_date"><%= movie_one.getMovie_date()%></p>
+	         <p id="movie_age">관람 등급 : <%= movie_one.getMovie_age() %></p>
+	         <P id="movie_title"><%= movie_one.getMovie_title() %></P>
+	         <p id="movie_genre"><%= movie_one.getMovie_genre() %></p>            
+	
+			<form method="post" action="WishService" target="myHiddenFrame" id=wishForm>
+				<div class = score>
+		             <!-- 총 평점 -->
+		             <p class="all-score">⭐ <%= movie_one.getMovie_rate() %></p>
+		
+					<!-- 찜- 버튼 바꾸기  -->
+					<input type="submit" name = like_check id="btnLike" value="찜🤞"><span id="btnNum">0 <%=member_id %></span>					
+				</div>
+			</form>
 			<% if(movie_one.getActors() != null){ %>
 				
         <P id="movie_actor">주연배우 : <%= movie_one.getActors() %></P>
@@ -123,24 +129,31 @@
          <P id="movie_story"> <%= movie_one.getSynopsis() %> </P>
           <br>   
           
-          </div>
-             <!-- 댓글창 -->
-           <form class="" action="chatService.do">
-         <section id="app">
+         </div>
+         <!-- 댓글창 -->
+         <form action="test" method="post" target="myHiddenFrame" name="commentForm" id="input-comment">
+         	<section id="app">
              <div class="containerMember">
                <div class="rows">
                  <div class="col-6">
                    <div class="comment">
-                       <p id="items" v-for="items in item" v-text="items"></p>   
+                   <%for (int i=0; i<m_list.size(); i++){  %>
+<!--                        <p id="items" v-for="items in item" v-text="items">    .value("")    -->
+                       <p id="items" >
+                       <span><%=m_list.get(i).getNickname()%>:<%=m_list.get(i).getMember_comment()%></span>
+                       <span style="float: right"> <%=m_list.get(i).getComment_date() %></span>
+                       	
+                       <%} %></p>
+                      
                    </div><!--End Comment-->
                    </div><!--End col -->
-                   </div><!-- End row -->
-              
+                   </div><!-- End row --> 
                <div class="rows">
                  <div class="col-6">
-                    <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
-                   <button v-on:click="addItem()" class='primaryContained float-right' type="button">Add Comment</button>
-                  
+                   <textarea type="text" name="comment" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()">
+                   	<%-- <%=m_list.get(0).getMember_id()%>:<%=m_list.get(0).getMember_comment()%>.<%=m_list.get(0).getComment_date() %> --%>
+                   </textarea>
+                    <button  v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
                  </div><!-- End col -->
                </div><!--End Row -->
              </div><!--End Container -->
@@ -170,7 +183,8 @@
                     <!-- 유튜버 이름 -->
                     <h5 class="mb-0"><%=youtube_list.get(i).getYoutuber() %></h5>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>&youtube_id=<%=youtube_list.get(i).getYoutube_id()%>"><p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>              
+                    <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>&youtube_id=<%=youtube_list.get(i).getYoutube_id()%>">
+                    <p class="mb-0"><video id="review" poster="<%=youtube_list.get(i).getImg_link() %>" onmouseover="this.play()" onmouseout="this.pause()" autobuffer="true"><source src="<%= youtube_list.get(i).getYoutubemp4_link()%>.mp4" type="video/mp4";codecs="avc1.42E01E,mp4a.40.2"></video></p></a>              
                     <a href="ReviewDetail.jsp?movie_id=<%=youtube_list.get(i).getMovie_id()%>&youtube_id=<%=youtube_list.get(i).getYoutube_id()%>"><p id="title"><%=youtube_list.get(i).getYoutube_title() %></p></a>
                     </div>
                 </div>
@@ -341,8 +355,9 @@
 
     <!-- Template Javascript -->
     <script src="js/mainyu.js"></script>
-    <!-- 예고편 -->
+    <!-- youtube-background 라이브러리 로드 -->
     <script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
-    <iframe  name="myHiddenFrame"  style="display:none;"></iframe>
+
+<iframe  name="myHiddenFrame"  style="display:none;"></iframe>
 </body>
 </html>
