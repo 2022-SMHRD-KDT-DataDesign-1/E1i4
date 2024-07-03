@@ -10,8 +10,11 @@ OTT 기반 리뷰영상 제공/추천 서비스
 ### 주제 선정 이유
 - 코로나 이후 국내 OTT 시장의 증가
 - 유튜브 15~20분짜리 조회 수가 증가, 설문조사 -> 긴 시간의 영상을 선호하지 않고 짧은 영상을 선호하며 요약 영상을 많이 보는 것을 알 수 있음
-  | :------------: | :-------------: |
-  |<img src="https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/e690a1ce-e8bf-4943-b9c8-1d808d0e0fdb" /> | <img src="https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/5e63e223-af5b-40b7-8731-270c49694827" />|
+  <div>
+    <img src="https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/e690a1ce-e8bf-4943-b9c8-1d808d0e0fdb" />
+    <img src="https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/5e63e223-af5b-40b7-8731-270c49694827" />
+  </div>
+  
 ### 🕰개발 기간
   - 2023.3 ~ 2023.4.06
 <br>
