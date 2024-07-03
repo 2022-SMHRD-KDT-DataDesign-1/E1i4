@@ -43,20 +43,24 @@ https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/f8dbbe89-98
   <br>
   <img src="https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/2d31b582-3a9f-4bce-85b3-73a300da1906" />
   <br><br>
+  
 ### 2. 찜 기능
   - 상세페이지에서 찜 기능으로 영화를 보관함에 저장
   <br>
   <img src="https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/8f5706bc-8398-495a-984c-93fcdc076c24" />
   <br><br>
+  
 ### 3. 댓글 기능
   - 상세페이지에서 영화에 대한 리뷰를 남길 수 있음
   <br>
   <img src="https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/0e3a1592-21b5-403f-ad2c-23d12f0e2d5a" />
   <br><br>
+  
 ### 4. 검색 기능
   - 검색창에 영화 키워드를 입력하면 관련 영화 분류
   <img src="https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/91c7ebf2-7b22-4518-93ab-05a8f0c769d2" />
   <br><br>
+  
 ### 5. AI 추천 기능
   - 보관함에 저장된 영화 장르를 통해 영상 추천
   <img src="https://github.com/2022-SMHRD-KDT-DataDesign-1/E1i4/assets/117342414/6907d004-3232-438e-bf4e-53f57df971d8" />
